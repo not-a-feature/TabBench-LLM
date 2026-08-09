@@ -1,0 +1,33 @@
+{
+  "_doc": "Paid / rate-limited third-party endpoints, parked out of the default registry. They are NOT loaded unless $TABBENCH_LLM_EXTRA_MODELS names this file (os.pathsep-separated paths), e.g. TABBENCH_LLM_EXTRA_MODELS=src/tabbench_llm/llm/data/llm_models_external.json. Parked because the first full grid pass was rate-limited rather than compute-limited: the majority of their cells returned HTTP 429, which left each model scored on a different subset of datasets. Re-add them only with a quota that can cover the whole grid.",
+  "GEMINI-3.1-FLASH-LITE": {
+    "api_model": "gemini-3.1-flash-lite",
+    "provider": "google",
+    "context_window": 1048576
+  },
+  "GEMINI-3.5-FLASH": {
+    "api_model": "gemini-3.5-flash",
+    "provider": "google",
+    "context_window": 1048576
+  },
+  "MISTRAL-MEDIUM": {
+    "api_model": "mistralai/mistral-medium-3.5-128b",
+    "provider": "nvidia-nim",
+    "reasoning_efforts": [
+      "none",
+      "high"
+    ],
+    "context_window": 131072
+  },
+  "LLAMA-3.1-8B": {
+    "api_model": "llama-3.1-8b-instant",
+    "provider": "groq",
+    "reasoning": false,
+    "context_window": 131072
+  },
+  "NEMOTRON-NANO-30B": {
+    "api_model": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "provider": "openrouter",
+    "context_window": 256000
+  }
+}

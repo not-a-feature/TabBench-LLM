@@ -1,0 +1,88 @@
+{
+  "_doc": "Canonical publication grid shared by all three machines. Each machine runs only its --models slice; never change this roster while merging into the same output root.",
+  "reasoning": [
+    "off"
+  ],
+  "_headline": "Synthetic · Reason off · feat full · opaque labels · n=100 · macro-F1",
+  "_label_note": "scripts/grid.py schedules visible labels only for real datasets. Synthetic datasets run only the opaque/hidden arm.",
+  "samples": [
+    10,
+    20,
+    50,
+    100
+  ],
+  "real_grid": {
+    "reasoning": [
+      "off"
+    ],
+    "labels": [
+      "visible",
+      "hidden"
+    ],
+    "feature_caps": [
+      "full"
+    ],
+    "samples": [
+      50
+    ]
+  },
+  "_real_grid_note": "The secondary real-data suite is deliberately limited to reason=off x visible/opaque labels x full features x n=50. scripts/grid.py keeps historic per-cell config.json files unchanged and filters execution/aggregation to this schedule, so existing partial Ollama results remain merge-compatible.",
+  "datasets": "datasets/tabarena_classification.json",
+  "models": [
+    "DUMMY",
+    "RF",
+    "REALTABPFN-V2",
+    "GEMMA",
+    "QWEN",
+    "OLLAMA-GEMMA3-4B",
+    "OLLAMA-QWEN3-8B",
+    "OLLAMA-LLAMA3.1-8B",
+    "OLLAMA-MISTRAL-7B",
+    "OLLAMA-PHI4-MINI",
+    "LOCAL-QWEN3-8B",
+    "LOCAL-QWEN3-32B-FP8",
+    "LOCAL-QWEN3-30B-A3B",
+    "LOCAL-GEMMA-3-27B",
+    "LOCAL-LLAMA-3.1-8B",
+    "LOCAL-MISTRAL-7B-FP16",
+    "LOCAL-MISTRAL-SMALL-3.1-24B-FP16"
+  ],
+  "_model_slices": {
+    "control_pc_mlcloud": [
+      "GEMMA",
+      "QWEN"
+    ],
+    "windows_gpu_ollama": [
+      "OLLAMA-GEMMA3-4B",
+      "OLLAMA-QWEN3-8B",
+      "OLLAMA-LLAMA3.1-8B",
+      "OLLAMA-MISTRAL-7B",
+      "OLLAMA-PHI4-MINI"
+    ],
+    "h100_cluster": [
+      "DUMMY",
+      "RF",
+      "REALTABPFN-V2",
+      "LOCAL-QWEN3-8B",
+      "LOCAL-QWEN3-32B-FP8",
+      "LOCAL-QWEN3-30B-A3B",
+      "LOCAL-GEMMA-3-27B",
+      "LOCAL-LLAMA-3.1-8B",
+      "LOCAL-MISTRAL-7B-FP16",
+      "LOCAL-MISTRAL-SMALL-3.1-24B-FP16"
+    ]
+  },
+  "cv_folds": 5,
+  "test_size": 0.2,
+  "test_subsample": 100,
+  "min_samples_per_class": 10,
+  "random_state": 42,
+  "output": "results/grid_all_systems",
+  "cache_dir": ".cache",
+  "llm_settings": {
+    "test_batch_size": 1,
+    "elicit_proba": false,
+    "max_unparsed_frac": 0.0
+  },
+  "_llm_settings_note": "Inductive one-row requests, label metrics only, and zero tolerance for parser fallbacks."
+}

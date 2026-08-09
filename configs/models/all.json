@@ -1,0 +1,28 @@
+[
+  {
+    "_doc": "Chance-level reference. Its per-target score defines the level a failed run is imputed at (tabbench_llm.coverage.BASELINE_MODEL), so it has to run on every scheduled unit: a target where DUMMY is absent is a target where no failure can be scored.",
+    "key": "DUMMY",
+    "device": "cpu",
+    "solo": false
+  },
+  {
+    "key": "RF",
+    "device": "cpu",
+    "solo": false
+  },
+  {
+    "key": "REALTABPFN-V2",
+    "device": "gpu",
+    "solo": true
+  },
+  {
+    "key": "GEMMA",
+    "device": "cpu",
+    "solo": false
+  },
+  {
+    "key": "QWEN",
+    "device": "cpu",
+    "solo": false
+  }
+]

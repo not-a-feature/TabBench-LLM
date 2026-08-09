@@ -1,0 +1,34 @@
+{
+  "_doc": "Small test grid: 4 models x 6 datasets, 20 few-shot train rows, 20 test rows, single holdout split. Run: python scripts/grid.py --config configs/grid_test.json",
+  "samples": [
+    20
+  ],
+  "datasets": [
+    "diabetes",
+    "blood-transfusion-service-center",
+    "maternal_health_risk",
+    "website_phishing",
+    "credit-g",
+    "qsar-biodeg"
+  ],
+  "models": [
+    "DUMMY",
+    "RF",
+    "REALTABPFN-V2",
+    "GEMMA",
+    "QWEN"
+  ],
+  "cv_folds": null,
+  "test_size": 0.2,
+  "test_subsample": 20,
+  "min_samples_per_class": 10,
+  "random_state": 42,
+  "output": "results/grid_test",
+  "cache_dir": ".cache",
+  "llm_settings": {
+    "test_batch_size": 1,
+    "elicit_proba": false,
+    "max_unparsed_frac": 0.0
+  },
+  "_llm_settings_note": "Strict test settings: inductive one-row requests, label metrics only, and no parser fallback admitted into a result."
+}

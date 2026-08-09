@@ -1,0 +1,2 @@
+FROM mistral:7b-instruct
+PARAMETER num_ctx 32768

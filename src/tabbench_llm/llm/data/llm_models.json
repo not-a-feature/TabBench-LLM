@@ -1,0 +1,111 @@
+{
+  "GEMMA": {
+    "api_model": "google/gemma-4-31B-it-qat-w4a16-ct",
+    "provider": "ml-cloud",
+    "parameters_b": 31,
+    "context_window": 262144
+  },
+  "QWEN": {
+    "api_model": "Qwen/Qwen3.6-35B-A3B",
+    "provider": "ml-cloud",
+    "parameters_b": 35,
+    "active_parameters_b": 3,
+    "context_window": 40960
+  },
+  "_ollama_note": "Windows/local workstation models served by Ollama's OpenAI-compatible API. The setup script creates the tabarena-* aliases from the named upstream Ollama tags with num_ctx=32768; keep context_window equal to that Modelfile setting. The headline n=100/full-feature synthetic task needs more than 8k on the widest generator. These quantized systems are not weight-identical controls for the bf16/FP8 cluster checkpoints.",
+  "OLLAMA-GEMMA3-4B": {
+    "api_model": "tabarena-gemma3-4b",
+    "provider": "ollama",
+    "parameters_b": 4,
+    "reasoning": false,
+    "context_window": 32768
+  },
+  "OLLAMA-QWEN3-8B": {
+    "api_model": "tabarena-qwen3-8b",
+    "provider": "ollama",
+    "parameters_b": 8,
+    "reasoning_efforts": [
+      "none",
+      "low",
+      "medium",
+      "high"
+    ],
+    "context_window": 32768
+  },
+  "OLLAMA-LLAMA3.1-8B": {
+    "api_model": "tabarena-llama31-8b",
+    "provider": "ollama",
+    "parameters_b": 8,
+    "reasoning": false,
+    "context_window": 32768
+  },
+  "OLLAMA-MISTRAL-7B": {
+    "api_model": "tabarena-mistral-7b",
+    "provider": "ollama",
+    "parameters_b": 7.24,
+    "reasoning": false,
+    "context_window": 32768
+  },
+  "OLLAMA-PHI4-MINI": {
+    "api_model": "tabarena-phi4-mini",
+    "provider": "ollama",
+    "parameters_b": 3.8,
+    "reasoning": false,
+    "context_window": 32768
+  },
+  "_cluster_ollama_note": "The stable LOCAL-* keys are retained solely so partial Windows result trees keep their canonical roster and can be merged without a config conflict. They now run through the self-hosted Ollama API on the H100 server, not vLLM. The run manifest records the actual Ollama alias, immutable model digest and server version; the key name is not a claim about the quantization.",
+  "LOCAL-QWEN3-8B": {
+    "api_model": "tabarena-h100-qwen3-8b",
+    "provider": "ollama",
+    "ollama_source": "qwen3:8b-fp16",
+    "parameters_b": 8,
+    "context_window": 32768
+  },
+  "LOCAL-QWEN3-32B-FP8": {
+    "api_model": "tabarena-h100-qwen3-32b",
+    "provider": "ollama",
+    "ollama_source": "qwen3:32b-q8_0",
+    "parameters_b": 32,
+    "context_window": 32768
+  },
+  "LOCAL-QWEN3-30B-A3B": {
+    "api_model": "tabarena-h100-qwen3-30b-a3b",
+    "provider": "ollama",
+    "ollama_source": "qwen3:30b-a3b-fp16",
+    "parameters_b": 30,
+    "active_parameters_b": 3,
+    "context_window": 32768
+  },
+  "LOCAL-GEMMA-3-27B": {
+    "api_model": "tabarena-h100-gemma3-27b",
+    "provider": "ollama",
+    "ollama_source": "gemma3:27b-it-fp16",
+    "parameters_b": 27,
+    "reasoning": false,
+    "context_window": 32768
+  },
+  "LOCAL-LLAMA-3.1-8B": {
+    "api_model": "tabarena-h100-llama31-8b",
+    "provider": "ollama",
+    "ollama_source": "llama3.1:8b-instruct-fp16",
+    "parameters_b": 8,
+    "reasoning": false,
+    "context_window": 32768
+  },
+  "LOCAL-MISTRAL-7B-FP16": {
+    "api_model": "tabarena-h100-mistral-7b",
+    "provider": "ollama",
+    "ollama_source": "mistral:7b-instruct-v0.3-fp16",
+    "parameters_b": 7.24,
+    "reasoning": false,
+    "context_window": 32768
+  },
+  "LOCAL-MISTRAL-SMALL-3.1-24B-FP16": {
+    "api_model": "tabarena-h100-mistral-small31-24b",
+    "provider": "ollama",
+    "ollama_source": "mistral-small3.1:24b-instruct-2503-fp16",
+    "parameters_b": 24,
+    "reasoning": false,
+    "context_window": 32768
+  }
+}

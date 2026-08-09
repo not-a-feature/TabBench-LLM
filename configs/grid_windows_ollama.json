@@ -1,0 +1,36 @@
+{
+  "_doc": "Windows workstation pilot for the five Ollama models prepared by scripts/setup_windows.ps1. It intentionally contains only local LLMs; use configs/grid_all_systems.json for the canonical comparative benchmark.",
+  "reasoning": [
+    "off"
+  ],
+  "samples": [
+    10
+  ],
+  "datasets": [
+    "synthetic_linear",
+    "synthetic_xor",
+    "synthetic_mixed"
+  ],
+  "models": [
+    "OLLAMA-GEMMA3-4B",
+    "OLLAMA-QWEN3-8B",
+    "OLLAMA-LLAMA3.1-8B",
+    "OLLAMA-MISTRAL-7B",
+    "OLLAMA-PHI4-MINI"
+  ],
+  "cv_folds": 2,
+  "test_size": 0.2,
+  "test_subsample": 10,
+  "min_samples_per_class": 10,
+  "random_state": 42,
+  "output": "results/windows_ollama",
+  "cache_dir": ".cache",
+  "llm_settings": {
+    "test_batch_size": 1,
+    "max_workers": 1,
+    "cell_timeout_s": 3600,
+    "elicit_proba": false,
+    "max_unparsed_frac": 0.0
+  },
+  "_llm_settings_note": "Inductive one-row requests, one local request at a time, label metrics only, and zero tolerance for parser fallbacks. This is a functional pilot, not the publication roster."
+}

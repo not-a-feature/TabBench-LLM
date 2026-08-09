@@ -1,0 +1,2 @@
+FROM phi4-mini:3.8b
+PARAMETER num_ctx 32768

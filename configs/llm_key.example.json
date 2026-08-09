@@ -1,0 +1,6 @@
+{
+  "ml-cloud": {
+    "api_key": "REPLACE_WITH_YOUR_KEY",
+    "base_url": "https://llm.mlcloud.uni-tuebingen.de"
+  }
+}

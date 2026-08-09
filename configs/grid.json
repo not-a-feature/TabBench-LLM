@@ -1,0 +1,38 @@
+{
+  "_doc": "Hosted-only legacy slice. The canonical three-machine publication run is configs/grid_all_systems.json. Run this file only for an isolated MLCloud experiment.",
+  "reasoning": [
+    "off"
+  ],
+  "_reasoning_note": "Reasoning modes to run this pass (subset of ['off','on']). 'off' is fast; 'on' (chain-of-thought) is ~50-100x slower per LLM call — set to ['off','on'] once the off pass is done and you want the reasoning arm. Omit the key entirely to run both.",
+  "_feature_cap_note": "The feature-cap axis (FEATURE_CAPS in scripts/grid.py = full/32/64) is applied train-only. A cap only narrows datasets WIDER than it, so on a narrower dataset it recomputes a result identical to the full arm — 39/57 datasets are untouched by cap=32 and 49/57 by cap=64. To avoid tripling the (expensive) LLM cost, each cap arm runs ONLY the datasets it genuinely narrows (the full arm still covers all datasets); narrow datasets therefore appear only in the full-feature arm.",
+  "samples": [
+    10,
+    20,
+    50,
+    100,
+    "all"
+  ],
+  "_samples_note": "Few-shot training-set sizes per dataset. 'all' is retained only in this legacy hosted config. The publication headline is synthetic / reason_off / labels_hidden / feat_full / n_100 in configs/grid_all_systems.json.",
+  "datasets": "datasets/tabarena_classification.json",
+  "models": [
+    "DUMMY",
+    "RF",
+    "REALTABPFN-V2",
+    "GEMMA",
+    "QWEN"
+  ],
+  "_models_note": "DUMMY is the chance-level reference and must stay in the roster: a failed run is imputed at DUMMY's score on the same (seed, target), so dropping it leaves failures unscoreable. It is a constant predictor — cheap, no LLM calls. RF + REALTABPFN-V2 (TabPFN v2) are the trained baselines (need the autogluon extra). GEMMA + QWEN are the Tübingen ml-cloud LLMs (need the openai extra + an ml-cloud block in configs/llm_key.json). The paid third-party endpoints (GEMINI-*, MISTRAL-MEDIUM, LLAMA-3.1-8B, NEMOTRON-NANO-30B) were removed after the first pass returned HTTP 429 for the majority of their cells, which left each model scored on a different subset of datasets. They are parked in src/tabbench_llm/llm/data/llm_models_external.json: set TABBENCH_LLM_EXTRA_MODELS to that path and add the keys back here to re-run them, ideally only with a quota that covers the whole grid.",
+  "cv_folds": 5,
+  "test_size": 0.2,
+  "test_subsample": 100,
+  "min_samples_per_class": 10,
+  "random_state": 42,
+  "output": "results/grid",
+  "cache_dir": ".cache",
+  "llm_settings": {
+    "test_batch_size": 1,
+    "elicit_proba": false,
+    "max_unparsed_frac": 0.0
+  },
+  "_llm_settings_note": "Main-run inference settings. test_batch_size=1 is inductive: each test row is classified independently. elicit_proba=false keeps the primary analysis label-based; one-hot pseudo-probabilities are excluded from ROC-AUC/log-loss. max_unparsed_frac=0.0 rejects a cell if any test answer is unparseable, preventing majority-class parser fallbacks from entering the scientific result."
+}

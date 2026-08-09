@@ -1,0 +1,32 @@
+name: Upload leaderboard data
+
+# The public page lives in the juleskreuer.eu site repository; this repository owns the
+# numbers. Whenever the committed payload changes, ship it to the web host so the page
+# picks it up without a site rebuild.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "site_data/data/**"
+  workflow_dispatch:
+
+concurrency:
+  group: "leaderboard-upload"
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Upload payload
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ngcobalt385.manitu.net
+          username: ftp200041740
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: site_data/data/
+          server-dir: research/files/tabbench-llm/

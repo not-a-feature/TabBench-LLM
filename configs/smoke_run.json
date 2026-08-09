@@ -1,0 +1,41 @@
+{
+  "_doc": "Smoke test: 3 small TabArena datasets, LLM-only, 10 few-shot train rows, 5 test rows. Run: python -m tabbench_llm.cli run --config configs/smoke_run.json --step all",
+  "datasets_classification": [
+    "diabetes",
+    "blood-transfusion-service-center",
+    "maternal_health_risk"
+  ],
+  "datasets_regression": [],
+  "models": [
+    "GEMMA",
+    "QWEN"
+  ],
+  "test_size": 0.2,
+  "random_state": 42,
+  "n_repetitions": 1,
+  "cv_folds": null,
+  "min_samples_per_class": 10,
+  "group_regression_splits": false,
+  "max_features_default": null,
+  "max_classes": null,
+  "train_subsample": 10,
+  "test_subsample": 5,
+  "model_limits": {},
+  "cache_dir": ".cache",
+  "output_dir": "results/smoke",
+  "autogluon_time_limit": 60,
+  "autogluon_presets": "medium_quality",
+  "optimize": false,
+  "ensemble": false,
+  "num_hpo_trials": 0,
+  "nan_policy": {
+    "default": "native"
+  },
+  "exclude_keys": [],
+  "exclude_datasets": [],
+  "exclude_targets": [],
+  "llm_settings": {
+    "test_batch_size": 1,
+    "elicit_proba": false
+  }
+}
