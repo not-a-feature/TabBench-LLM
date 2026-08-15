@@ -67,7 +67,15 @@ print(f"[ollama-grid] CUDA preflight passed: {torch.cuda.get_device_name(0)} {pr
 PY
 
 OLLAMA_LOG="$PROJECT_ROOT/logs/ollama.${SLURM_JOB_ID}.log"
-ollama serve > "$OLLAMA_LOG" 2>&1 &
+# A node with a faulty GPU breaks Ollama's index-based CUDA enumeration: with
+# CUDA_VISIBLE_DEVICES set it discovers no GPU at all and silently serves on CPU
+# (size_vram=0). Unset, Ollama filters the bad device and picks the healthy one itself.
+# The Python side keeps CUDA_VISIBLE_DEVICES so the preflight and GPU baselines stay pinned.
+if [ "${OLLAMA_AUTODETECT_GPU:-0}" = "1" ]; then
+    env -u CUDA_VISIBLE_DEVICES ollama serve > "$OLLAMA_LOG" 2>&1 &
+else
+    ollama serve > "$OLLAMA_LOG" 2>&1 &
+fi
 OLLAMA_PID=$!
 
 cleanup() {
