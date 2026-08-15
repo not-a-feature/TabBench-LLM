@@ -1,58 +1,58 @@
 Dataset,Type,Source,Task,Target,# Samples,# Classes,# Features,License
-APSFailure,Tabular,Misc,binary,—,76000,2,170,Public
-Amazon employee access,Tabular,Misc,binary,—,32769,2,9,Public
-Bank Customer Churn,Tabular,Misc,binary,—,10000,2,10,Public
-Bioresponse,Tabular,Misc,binary,—,3751,2,1776,Public
-Diabetes130US,Tabular,Misc,binary,—,71518,2,47,Public
-E-CommereShippingData,Tabular,Misc,binary,—,10999,2,10,Public
-Fitness Club,Tabular,Misc,binary,—,1500,2,6,Public
-GiveMeSomeCredit,Tabular,Misc,binary,—,150000,2,10,Public
-HR Analytics Job Change of Data Scientists,Tabular,Misc,binary,—,19158,2,12,Public
-Is-this-a-good-customer,Tabular,Misc,binary,—,1723,2,13,Public
-MIC,Tabular,Misc,multiclass,—,1699,8,111,Public
-Marketing Campaign,Tabular,Misc,binary,—,2240,2,25,Public
-NATICUSdroid,Tabular,Misc,binary,—,7491,2,86,Public
-SDSS17,Tabular,Misc,multiclass,—,78053,3,11,Public
-anneal,Tabular,Misc,multiclass,—,898,5,38,Public
-bank-marketing,Tabular,Misc,binary,—,45211,2,13,Public
-blood-transfusion-service-center,Tabular,Misc,binary,—,748,2,4,Public
-churn,Tabular,Misc,binary,—,5000,2,19,Public
-coil2000 insurance policies,Tabular,Misc,binary,—,9822,2,85,Public
-credit-g,Tabular,Misc,binary,—,1000,2,20,Public
-credit card clients default,Tabular,Misc,binary,—,30000,2,23,Public
-customer satisfaction in airline,Tabular,Misc,binary,—,129880,2,21,Public
-diabetes,Tabular,Misc,binary,—,768,2,8,Public
-hazelnut-spread-contaminant-detection,Tabular,Misc,binary,—,2400,2,30,Public
-heloc,Tabular,Misc,binary,—,10459,2,23,Public
-hiva agnostic,Tabular,Misc,multiclass,—,3845,3,1617,Public
-in vehicle coupon recommendation,Tabular,Misc,binary,—,12684,2,24,Public
-jm1,Tabular,Misc,binary,—,10885,2,21,Public
-kddcup09 appetency,Tabular,Misc,binary,—,50000,2,212,Public
-maternal health risk,Tabular,Misc,multiclass,—,1014,3,6,Public
-online shoppers intention,Tabular,Misc,binary,—,12330,2,17,Public
-polish companies bankruptcy,Tabular,Misc,binary,—,5910,2,64,Public
-qsar-biodeg,Tabular,Misc,binary,—,1054,2,41,Public
-seismic-bumps,Tabular,Misc,binary,—,2584,2,15,Public
-splice,Tabular,Misc,multiclass,—,3190,3,60,Public
-students dropout and academic success,Tabular,Misc,multiclass,—,4424,3,36,Public
-synthetic: gaussian clusters,Synthetic,SYNTHETIC,multiclass,target,172,3,6,synthetic (generated)
-synthetic: checkerboard,Synthetic,SYNTHETIC,binary,target,200,2,4,synthetic (generated)
-synthetic: additive nonlinear,Synthetic,SYNTHETIC,binary,target,184,2,8,synthetic (generated)
-synthetic: gaussian process,Synthetic,SYNTHETIC,binary,target,200,2,6,synthetic (generated)
-synthetic: hierarchical classes,Synthetic,SYNTHETIC,multiclass,target,196,6,8,synthetic (generated)
-synthetic: imbalanced classes,Synthetic,SYNTHETIC,binary,target,200,2,6,synthetic (generated)
-synthetic: linear boundary,Synthetic,SYNTHETIC,binary,target,180,2,8,synthetic (generated)
-synthetic: mixed categorical/numeric,Synthetic,SYNTHETIC,binary,target,188,2,5,synthetic (generated)
-synthetic: random neural net,Synthetic,SYNTHETIC,binary,target,200,2,10,synthetic (generated)
-synthetic: high label noise,Synthetic,SYNTHETIC,binary,target,196,2,6,synthetic (generated)
-synthetic: 3-way parity,Synthetic,SYNTHETIC,binary,target,200,2,5,synthetic (generated)
-synthetic: radial boundary,Synthetic,SYNTHETIC,binary,target,180,2,6,synthetic (generated)
-synthetic: causal graph,Synthetic,SYNTHETIC,binary,target,200,2,8,synthetic (generated)
-synthetic: sparse signal,Synthetic,SYNTHETIC,binary,target,180,2,40,synthetic (generated)
-synthetic: decision tree,Synthetic,SYNTHETIC,binary,target,196,2,8,synthetic (generated)
-synthetic: wide distributed signal,Synthetic,SYNTHETIC,binary,target,200,2,64,synthetic (generated)
-synthetic: wide nonlinear signal,Synthetic,SYNTHETIC,binary,target,200,2,64,synthetic (generated)
-synthetic: wide sparse signal,Synthetic,SYNTHETIC,binary,target,200,2,64,synthetic (generated)
-synthetic: XOR interaction,Synthetic,SYNTHETIC,binary,target,164,2,4,synthetic (generated)
-taiwanese bankruptcy prediction,Tabular,Misc,binary,—,6819,2,94,Public
-website phishing,Tabular,Misc,multiclass,—,1353,3,9,Public
+APSFailure,Tabular,Misc,binary,—,,,,Public
+Amazon employee access,Tabular,Misc,binary,—,,,,Public
+Bank Customer Churn,Tabular,Misc,binary,—,,,,Public
+Bioresponse,Tabular,Misc,binary,—,,,,Public
+Diabetes130US,Tabular,Misc,binary,—,,,,Public
+E-CommereShippingData,Tabular,Misc,binary,—,,,,Public
+Fitness Club,Tabular,Misc,binary,—,,,,Public
+GiveMeSomeCredit,Tabular,Misc,binary,—,,,,Public
+HR Analytics Job Change of Data Scientists,Tabular,Misc,binary,—,,,,Public
+Is-this-a-good-customer,Tabular,Misc,binary,—,,,,Public
+MIC,Tabular,Misc,multiclass,—,,,,Public
+Marketing Campaign,Tabular,Misc,binary,—,,,,Public
+NATICUSdroid,Tabular,Misc,binary,—,,,,Public
+SDSS17,Tabular,Misc,multiclass,—,,,,Public
+anneal,Tabular,Misc,multiclass,—,,,,Public
+bank-marketing,Tabular,Misc,binary,—,,,,Public
+blood-transfusion-service-center,Tabular,Misc,binary,—,,,,Public
+churn,Tabular,Misc,binary,—,,,,Public
+coil2000 insurance policies,Tabular,Misc,binary,—,,,,Public
+credit-g,Tabular,Misc,binary,—,,,,Public
+credit card clients default,Tabular,Misc,binary,—,,,,Public
+customer satisfaction in airline,Tabular,Misc,binary,—,,,,Public
+diabetes,Tabular,Misc,binary,—,,,,Public
+hazelnut-spread-contaminant-detection,Tabular,Misc,binary,—,,,,Public
+heloc,Tabular,Misc,binary,—,,,,Public
+hiva agnostic,Tabular,Misc,multiclass,—,,,,Public
+in vehicle coupon recommendation,Tabular,Misc,binary,—,,,,Public
+jm1,Tabular,Misc,binary,—,,,,Public
+kddcup09 appetency,Tabular,Misc,binary,—,,,,Public
+maternal health risk,Tabular,Misc,multiclass,—,,,,Public
+online shoppers intention,Tabular,Misc,binary,—,,,,Public
+polish companies bankruptcy,Tabular,Misc,binary,—,,,,Public
+qsar-biodeg,Tabular,Misc,binary,—,,,,Public
+seismic-bumps,Tabular,Misc,binary,—,,,,Public
+splice,Tabular,Misc,multiclass,—,,,,Public
+students dropout and academic success,Tabular,Misc,multiclass,—,,,,Public
+synthetic: gaussian clusters,Synthetic,SYNTHETIC,multiclass,target,,,,synthetic (generated)
+synthetic: checkerboard,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: additive nonlinear,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: gaussian process,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: hierarchical classes,Synthetic,SYNTHETIC,multiclass,target,,,,synthetic (generated)
+synthetic: imbalanced classes,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: linear boundary,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: mixed categorical/numeric,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: random neural net,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: high label noise,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: 3-way parity,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: radial boundary,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: causal graph,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: sparse signal,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: decision tree,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: wide distributed signal,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: wide nonlinear signal,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: wide sparse signal,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+synthetic: XOR interaction,Synthetic,SYNTHETIC,binary,target,,,,synthetic (generated)
+taiwanese bankruptcy prediction,Tabular,Misc,binary,—,,,,Public
+website phishing,Tabular,Misc,multiclass,—,,,,Public
