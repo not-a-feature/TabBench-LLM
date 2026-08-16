@@ -108,7 +108,7 @@
      "Rank": 3,
      "Model": "Gemma 4 31B (MLCloud)",
      "Category": "Gemma",
-     "Elo": 894,
+     "Elo": 895,
      "Score": 0.7368,
      "Avg Rank": 2.9,
      "Improvability": 26.3,
@@ -118,7 +118,7 @@
      "Rank": 4,
      "Model": "Qwen 3.6 35B-A3B (MLCloud)",
      "Category": "Qwen",
-     "Elo": 455,
+     "Elo": 453,
      "Score": 0.6332,
      "Avg Rank": 5.9,
      "Improvability": 36.7,
@@ -126,39 +126,39 @@
     },
     {
      "Rank": 5,
-     "Model": "Gemma 3 27B (Ollama H100)",
-     "Category": "Gemma",
-     "Elo": 429,
-     "Score": 0.6264,
-     "Avg Rank": 6.0,
-     "Improvability": 37.4,
-     "# Targets": 16
-    },
-    {
-     "Rank": 6,
      "Model": "Qwen3 32B (Ollama H100)",
      "Category": "Qwen",
-     "Elo": 609,
+     "Elo": 611,
      "Score": 0.6104,
      "Avg Rank": 4.6,
      "Improvability": 39.0,
      "# Targets": 19
     },
     {
-     "Rank": 7,
+     "Rank": 6,
      "Model": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "Category": "Mistral",
-     "Elo": 497,
+     "Elo": 496,
      "Score": 0.5958,
      "Avg Rank": 5.3,
      "Improvability": 40.4,
      "# Targets": 19
     },
     {
+     "Rank": 7,
+     "Model": "Gemma 3 27B (Ollama H100)",
+     "Category": "Gemma",
+     "Elo": 389,
+     "Score": 0.5427,
+     "Avg Rank": 6.2,
+     "Improvability": 45.7,
+     "# Targets": 19
+    },
+    {
      "Rank": 8,
      "Model": "Qwen3 30B-A3B (Ollama H100)",
      "Category": "Qwen",
-     "Elo": 88,
+     "Elo": 104,
      "Score": 0.4972,
      "Avg Rank": 8.5,
      "Improvability": 50.3,
@@ -168,7 +168,7 @@
      "Rank": 9,
      "Model": "Qwen3 8B (Ollama H100)",
      "Category": "Qwen",
-     "Elo": 64,
+     "Elo": 108,
      "Score": 0.4193,
      "Avg Rank": 8.2,
      "Improvability": 58.1,
@@ -178,7 +178,7 @@
      "Rank": 10,
      "Model": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "Category": "Mistral",
-     "Elo": -99,
+     "Elo": -76,
      "Score": 0.4044,
      "Avg Rank": 9.7,
      "Improvability": 59.6,
@@ -188,7 +188,7 @@
      "Rank": 11,
      "Model": "Llama 3.1 8B (Ollama H100)",
      "Category": "Llama",
-     "Elo": -101,
+     "Elo": -54,
      "Score": 0.2719,
      "Avg Rank": 9.2,
      "Improvability": 72.8,
@@ -198,9 +198,9 @@
      "Rank": 12,
      "Model": "Random",
      "Category": "Baseline",
-     "Elo": -705,
+     "Elo": -696,
      "Score": 0.0001,
-     "Avg Rank": 11.0,
+     "Avg Rank": 11.2,
      "Improvability": 100.0,
      "# Targets": 19
     }
@@ -369,7 +369,7 @@
      "Rank": 3,
      "Model": "Gemma 4 31B (MLCloud)",
      "Category": "Gemma",
-     "Elo": 894,
+     "Elo": 895,
      "Score": 0.7368,
      "Avg Rank": 2.9,
      "Macro-F1": 0.7163,
@@ -384,7 +384,7 @@
      "Rank": 4,
      "Model": "Qwen 3.6 35B-A3B (MLCloud)",
      "Category": "Qwen",
-     "Elo": 455,
+     "Elo": 453,
      "Score": 0.6332,
      "Avg Rank": 5.9,
      "Macro-F1": 0.6717,
@@ -397,24 +397,9 @@
     },
     {
      "Rank": 5,
-     "Model": "Gemma 3 27B (Ollama H100)",
-     "Category": "Gemma",
-     "Elo": 429,
-     "Score": 0.6264,
-     "Avg Rank": 6.0,
-     "Macro-F1": 0.6653,
-     "Bal. Acc.": 0.6803,
-     "MCC": 0.3979,
-     "F1": 0.687,
-     "ROC-AUC": null,
-     "Improvability": 37.4,
-     "# Targets": 16
-    },
-    {
-     "Rank": 6,
      "Model": "Qwen3 32B (Ollama H100)",
      "Category": "Qwen",
-     "Elo": 609,
+     "Elo": 611,
      "Score": 0.6104,
      "Avg Rank": 4.6,
      "Macro-F1": 0.651,
@@ -426,10 +411,10 @@
      "# Targets": 19
     },
     {
-     "Rank": 7,
+     "Rank": 6,
      "Model": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "Category": "Mistral",
-     "Elo": 497,
+     "Elo": 496,
      "Score": 0.5958,
      "Avg Rank": 5.3,
      "Macro-F1": 0.643,
@@ -441,10 +426,25 @@
      "# Targets": 19
     },
     {
+     "Rank": 7,
+     "Model": "Gemma 3 27B (Ollama H100)",
+     "Category": "Gemma",
+     "Elo": 389,
+     "Score": 0.5427,
+     "Avg Rank": 6.2,
+     "Macro-F1": 0.6193,
+     "Bal. Acc.": 0.6525,
+     "MCC": 0.3352,
+     "F1": 0.6378,
+     "ROC-AUC": null,
+     "Improvability": 45.7,
+     "# Targets": 19
+    },
+    {
      "Rank": 8,
      "Model": "Qwen3 30B-A3B (Ollama H100)",
      "Category": "Qwen",
-     "Elo": 88,
+     "Elo": 104,
      "Score": 0.4972,
      "Avg Rank": 8.5,
      "Macro-F1": 0.5993,
@@ -459,7 +459,7 @@
      "Rank": 9,
      "Model": "Qwen3 8B (Ollama H100)",
      "Category": "Qwen",
-     "Elo": 64,
+     "Elo": 108,
      "Score": 0.4193,
      "Avg Rank": 8.2,
      "Macro-F1": 0.5559,
@@ -474,7 +474,7 @@
      "Rank": 10,
      "Model": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "Category": "Mistral",
-     "Elo": -99,
+     "Elo": -76,
      "Score": 0.4044,
      "Avg Rank": 9.7,
      "Macro-F1": 0.5603,
@@ -489,7 +489,7 @@
      "Rank": 11,
      "Model": "Llama 3.1 8B (Ollama H100)",
      "Category": "Llama",
-     "Elo": -101,
+     "Elo": -54,
      "Score": 0.2719,
      "Avg Rank": 9.2,
      "Macro-F1": 0.4648,
@@ -504,9 +504,9 @@
      "Rank": 12,
      "Model": "Random",
      "Category": "Baseline",
-     "Elo": -705,
+     "Elo": -696,
      "Score": 0.0001,
-     "Avg Rank": 11.0,
+     "Avg Rank": 11.2,
      "Macro-F1": 0.3217,
      "Bal. Acc.": 0.4737,
      "MCC": 0.0,
@@ -1602,6 +1602,7 @@
      "scores": {
       "DUMMY": 0.0,
       "GEMMA": 0.394,
+      "LOCAL-GEMMA-3-27B": 0.0371,
       "LOCAL-LLAMA-3.1-8B": 0.1462,
       "LOCAL-MISTRAL-SMALL-3.1-24B-FP16": 0.1459,
       "LOCAL-QWEN3-32B-FP8": 0.209,
@@ -1620,6 +1621,7 @@
      "scores": {
       "DUMMY": 0.0,
       "GEMMA": 0.4675,
+      "LOCAL-GEMMA-3-27B": 0.1498,
       "LOCAL-LLAMA-3.1-8B": 0.3289,
       "LOCAL-MISTRAL-SMALL-3.1-24B-FP16": 0.3486,
       "LOCAL-QWEN3-32B-FP8": 0.2568,
@@ -1638,6 +1640,7 @@
      "scores": {
       "DUMMY": 0.0,
       "GEMMA": 0.2546,
+      "LOCAL-GEMMA-3-27B": 0.1031,
       "LOCAL-LLAMA-3.1-8B": 0.0729,
       "LOCAL-MISTRAL-SMALL-3.1-24B-FP16": 0.0741,
       "LOCAL-QWEN3-32B-FP8": 0.1474,
@@ -1752,10 +1755,10 @@
     "Mistral Small 3.1 24B FP16 (Ollama H100)",
     "Qwen 3.6 35B-A3B (MLCloud)",
     "Gemma 3 27B (Ollama H100)",
-    "Qwen3 30B-A3B (Ollama H100)",
     "Qwen3 8B (Ollama H100)",
-    "Mistral 7B v0.3 FP16 (Ollama H100)",
+    "Qwen3 30B-A3B (Ollama H100)",
     "Llama 3.1 8B (Ollama H100)",
+    "Mistral 7B v0.3 FP16 (Ollama H100)",
     "Random"
    ],
    "matrix": [
@@ -1766,11 +1769,11 @@
      19.0,
      18.5,
      16.0,
-     16.0,
-     16.0,
      19.0,
-     14.0,
+     19.0,
+     16.0,
      17.0,
+     14.0,
      19.0
     ],
     [
@@ -1780,11 +1783,11 @@
      16.0,
      17.5,
      15.0,
-     14.0,
-     16.0,
-     19.0,
-     14.0,
      17.0,
+     19.0,
+     16.0,
+     17.0,
+     14.0,
      19.0
     ],
     [
@@ -1794,11 +1797,11 @@
      16.0,
      15.5,
      15.0,
-     14.0,
-     15.0,
+     17.0,
      18.0,
-     14.0,
+     15.0,
      16.0,
+     14.0,
      18.0
     ],
     [
@@ -1808,11 +1811,11 @@
      0.0,
      13.0,
      13.0,
-     11.5,
-     15.0,
+     14.5,
      17.0,
-     14.0,
+     15.0,
      16.0,
+     14.0,
      19.0
     ],
     [
@@ -1822,11 +1825,11 @@
      6.0,
      0.0,
      10.0,
-     10.0,
+     12.0,
      16.0,
      16.0,
-     13.0,
      15.0,
+     13.0,
      19.0
     ],
     [
@@ -1837,10 +1840,10 @@
      6.0,
      0.0,
      9.0,
-     15.0,
      16.0,
-     14.0,
+     15.0,
      13.0,
+     14.0,
      16.0
     ],
     [
@@ -1848,40 +1851,12 @@
      2.0,
      1.0,
      4.5,
-     6.0,
+     7.0,
      7.0,
      0.0,
-     13.0,
      14.0,
      13.0,
-     14.0,
-     16.0
-    ],
-    [
-     0.0,
-     0.0,
-     0.0,
-     1.0,
-     0.0,
-     1.0,
-     3.0,
-     0.0,
-     8.0,
-     12.0,
-     11.0,
-     15.0
-    ],
-    [
-     0.0,
-     0.0,
-     0.0,
-     2.0,
-     3.0,
-     0.0,
-     2.0,
-     8.0,
-     0.0,
-     8.0,
+     15.0,
      13.0,
      19.0
     ],
@@ -1889,15 +1864,29 @@
      0.0,
      0.0,
      0.0,
-     0.0,
-     1.0,
-     0.0,
-     1.0,
      2.0,
-     6.0,
+     3.0,
      0.0,
-     7.0,
-     13.0
+     5.0,
+     0.0,
+     8.0,
+     13.0,
+     8.0,
+     19.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     3.0,
+     8.0,
+     0.0,
+     11.0,
+     12.0,
+     15.0
     ],
     [
      0.0,
@@ -1906,11 +1895,11 @@
      1.0,
      2.0,
      1.0,
-     0.0,
-     3.0,
+     2.0,
      4.0,
-     5.0,
+     3.0,
      0.0,
+     5.0,
      17.0
     ],
     [
@@ -1918,13 +1907,27 @@
      0.0,
      0.0,
      0.0,
+     1.0,
+     0.0,
+     1.0,
+     6.0,
+     2.0,
+     7.0,
+     0.0,
+     13.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
      0.0,
      0.0,
      0.0,
      1.0,
      0.0,
      1.0,
-     0.0,
      0.0
     ]
    ]
@@ -1953,15 +1956,6 @@
      "pareto": false
     },
     {
-     "model_id": "LOCAL-GEMMA-3-27B",
-     "display": "Gemma 3 27B (Ollama H100)",
-     "category": "Gemma",
-     "x": 27.0,
-     "y": 0.6653,
-     "active_parameters_b": null,
-     "pareto": true
-    },
-    {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
@@ -1978,6 +1972,15 @@
      "y": 0.643,
      "active_parameters_b": null,
      "pareto": true
+    },
+    {
+     "model_id": "LOCAL-GEMMA-3-27B",
+     "display": "Gemma 3 27B (Ollama H100)",
+     "category": "Gemma",
+     "x": 27.0,
+     "y": 0.6193,
+     "active_parameters_b": null,
+     "pareto": false
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
@@ -2029,10 +2032,10 @@
     "Mistral Small 3.1 24B FP16 (Ollama H100)",
     "Qwen 3.6 35B-A3B (MLCloud)",
     "Gemma 3 27B (Ollama H100)",
-    "Qwen3 30B-A3B (Ollama H100)",
     "Qwen3 8B (Ollama H100)",
-    "Mistral 7B v0.3 FP16 (Ollama H100)",
+    "Qwen3 30B-A3B (Ollama H100)",
     "Llama 3.1 8B (Ollama H100)",
+    "Mistral 7B v0.3 FP16 (Ollama H100)",
     "Random"
    ],
    "datasets": [
@@ -2199,31 +2202,10 @@
      0.9672329114987567,
      0.24247049726434167,
      0.677059408713853,
-     null,
-     null,
-     null,
+     0.03711389341288201,
+     0.14983958678362133,
+     0.10314284439203361,
      0.89378834126581
-    ],
-    [
-     0.9833188443555034,
-     0.3462207603089725,
-     0.34573801744395816,
-     0.690292287818253,
-     0.45455027669467535,
-     1.8453448644599882e-05,
-     0.39202643669727644,
-     0.5523895869687514,
-     0.4984872684131108,
-     0.5690988978414222,
-     0.3655955066041082,
-     0.6601810216927692,
-     0.862583119209732,
-     0.24713044142813523,
-     0.43991940393111784,
-     null,
-     null,
-     null,
-     0.5482388965140226
     ],
     [
      0.9833289911709364,
@@ -2247,25 +2229,25 @@
      0.6108868740793073
     ],
     [
-     0.637933883672276,
-     0.4168665640929202,
-     0.23434722397222654,
-     0.5148322900368253,
+     0.9833188443555034,
+     0.3462207603089725,
+     0.34573801744395816,
+     0.690292287818253,
+     0.45455027669467535,
+     1.8453448644599882e-05,
+     0.39202643669727644,
+     0.5523895869687514,
+     0.4984872684131108,
+     0.5690988978414222,
+     0.3655955066041082,
+     0.6601810216927692,
+     0.862583119209732,
+     0.24713044142813523,
+     0.43991940393111784,
      null,
-     0.0,
-     0.30242083714287094,
-     0.38688212800259564,
-     0.4152861242511367,
-     0.5204497124777788,
-     0.44516405766689643,
-     0.5704820242510383,
-     0.7597952506772885,
-     null,
-     0.1551470544007327,
      null,
      null,
-     null,
-     0.30257752166690927
+     0.5482388965140226
     ],
     [
      0.4618311159136445,
@@ -2287,6 +2269,27 @@
      0.3289434266358378,
      0.07285038380844323,
      0.03931701656645989
+    ],
+    [
+     0.637933883672276,
+     0.4168665640929202,
+     0.23434722397222654,
+     0.5148322900368253,
+     null,
+     0.0,
+     0.30242083714287094,
+     0.38688212800259564,
+     0.4152861242511367,
+     0.5204497124777788,
+     0.44516405766689643,
+     0.5704820242510383,
+     0.7597952506772885,
+     null,
+     0.1551470544007327,
+     null,
+     null,
+     null,
+     0.30257752166690927
     ],
     [
      0.0,
@@ -2360,18 +2363,18 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1293,
-     "Elo_lo": 1169,
-     "Elo_hi": 1445,
+     "Elo": 1278,
+     "Elo_lo": 1161,
+     "Elo_hi": 1419,
      "n_targets": 33
     },
     {
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1022,
-     "Elo_lo": 910,
-     "Elo_hi": 1147,
+     "Elo": 1021,
+     "Elo_lo": 915,
+     "Elo_hi": 1137,
      "n_targets": 31
     },
     {
@@ -2379,8 +2382,8 @@
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
      "Elo": 1012,
-     "Elo_lo": 909,
-     "Elo_hi": 1099,
+     "Elo_lo": 916,
+     "Elo_hi": 1089,
      "n_targets": 30
     },
     {
@@ -2393,66 +2396,75 @@
      "n_targets": 38
     },
     {
-     "model_id": "LOCAL-QWEN3-32B-FP8",
-     "display": "Qwen3 32B (Ollama H100)",
-     "category": "Qwen",
-     "Elo": 953,
-     "Elo_lo": 841,
-     "Elo_hi": 1039,
-     "n_targets": 31
-    },
-    {
      "model_id": "REALTABPFN-V2",
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
-     "Elo": 950,
-     "Elo_lo": 875,
+     "Elo": 953,
+     "Elo_lo": 882,
      "Elo_hi": 1034,
      "n_targets": 38
+    },
+    {
+     "model_id": "LOCAL-QWEN3-32B-FP8",
+     "display": "Qwen3 32B (Ollama H100)",
+     "category": "Qwen",
+     "Elo": 950,
+     "Elo_lo": 850,
+     "Elo_hi": 1030,
+     "n_targets": 31
+    },
+    {
+     "model_id": "LOCAL-GEMMA-3-27B",
+     "display": "Gemma 3 27B (Ollama H100)",
+     "category": "Gemma",
+     "Elo": 934,
+     "Elo_lo": 824,
+     "Elo_hi": 1074,
+     "n_targets": 31
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 807,
-     "Elo_lo": 698,
-     "Elo_hi": 917,
+     "Elo": 808,
+     "Elo_lo": 707,
+     "Elo_hi": 915,
      "n_targets": 31
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 657,
-     "Elo_lo": 524,
-     "Elo_hi": 744,
+     "Elo": 666,
+     "Elo_lo": 547,
+     "Elo_hi": 754,
      "n_targets": 31
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 616,
-     "Elo_lo": 451,
-     "Elo_hi": 745,
+     "Elo": 620,
+     "Elo_lo": 471,
+     "Elo_hi": 739,
      "n_targets": 30
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 486,
-     "Elo_lo": 284,
-     "Elo_hi": 608,
+     "Elo": 495,
+     "Elo_lo": 311,
+     "Elo_hi": 612,
      "n_targets": 11
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 450,
-     "Elo_lo": 227,
-     "Elo_hi": 644,
+     "Elo": 457,
+     "Elo_lo": 251,
+     "Elo_hi": 630,
      "n_targets": 38
     }
    ],
@@ -2461,16 +2473,16 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1282,
-     "Elo_lo": 1202,
-     "Elo_hi": 1397,
+     "Elo": 1287,
+     "Elo_lo": 1201,
+     "Elo_hi": 1395,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1203,
+     "Elo": 1206,
      "Elo_lo": 1068,
      "Elo_hi": 1339,
      "n_targets": 19
@@ -2479,27 +2491,27 @@
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 1188,
-     "Elo_lo": 1072,
-     "Elo_hi": 1362,
-     "n_targets": 16
+     "Elo": 1143,
+     "Elo_lo": 1022,
+     "Elo_hi": 1295,
+     "n_targets": 19
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 1139,
-     "Elo_lo": 1000,
-     "Elo_hi": 1297,
+     "Elo": 1140,
+     "Elo_lo": 1004,
+     "Elo_hi": 1293,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 1134,
-     "Elo_lo": 984,
-     "Elo_hi": 1293,
+     "Elo": 1136,
+     "Elo_lo": 987,
+     "Elo_hi": 1286,
      "n_targets": 19
     },
     {
@@ -2515,54 +2527,54 @@
      "model_id": "REALTABPFN-V2",
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
-     "Elo": 980,
-     "Elo_lo": 849,
-     "Elo_hi": 1141,
+     "Elo": 981,
+     "Elo_lo": 851,
+     "Elo_hi": 1138,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 924,
-     "Elo_lo": 797,
-     "Elo_hi": 1076,
+     "Elo": 917,
+     "Elo_lo": 794,
+     "Elo_hi": 1073,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 762,
+     "Elo": 761,
      "Elo_lo": 619,
-     "Elo_hi": 877,
+     "Elo_hi": 876,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 752,
-     "Elo_lo": 558,
-     "Elo_hi": 903,
+     "Elo": 751,
+     "Elo_lo": 570,
+     "Elo_hi": 900,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 423,
-     "Elo_lo": -1,
-     "Elo_hi": 629,
+     "Elo": 424,
+     "Elo_lo": 6,
+     "Elo_hi": 618,
      "n_targets": 19
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": -156,
-     "Elo_lo": -1489,
-     "Elo_hi": 122,
+     "Elo": -158,
+     "Elo_lo": -1590,
+     "Elo_hi": 118,
      "n_targets": 19
     }
    ],
@@ -2571,9 +2583,9 @@
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1066,
+     "Elo": 1065,
      "Elo_lo": 932,
-     "Elo_hi": 1222,
+     "Elo_hi": 1221,
      "n_targets": 19
     },
     {
@@ -2581,17 +2593,17 @@
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
      "Elo": 1062,
-     "Elo_lo": 912,
-     "Elo_hi": 1190,
+     "Elo_lo": 913,
+     "Elo_hi": 1189,
      "n_targets": 19
     },
     {
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1034,
+     "Elo": 1033,
      "Elo_lo": 923,
-     "Elo_hi": 1199,
+     "Elo_hi": 1197,
      "n_targets": 19
     },
     {
@@ -2607,9 +2619,9 @@
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 1000,
-     "Elo_lo": 848,
-     "Elo_hi": 1144,
+     "Elo": 995,
+     "Elo_lo": 833,
+     "Elo_hi": 1141,
      "n_targets": 19
     },
     {
@@ -2618,61 +2630,61 @@
      "category": "Tabular Foundation",
      "Elo": 990,
      "Elo_lo": 897,
-     "Elo_hi": 1139,
+     "Elo_hi": 1138,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 904,
-     "Elo_lo": 660,
-     "Elo_hi": 1108,
-     "n_targets": 16
+     "Elo": 878,
+     "Elo_lo": 641,
+     "Elo_hi": 1092,
+     "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 598,
-     "Elo_lo": 298,
-     "Elo_hi": 793,
+     "Elo": 578,
+     "Elo_lo": 274,
+     "Elo_hi": 787,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 591,
-     "Elo_lo": 326,
-     "Elo_hi": 756,
+     "Elo": 577,
+     "Elo_lo": 305,
+     "Elo_hi": 753,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 460,
-     "Elo_lo": 190,
-     "Elo_hi": 659,
+     "Elo": 448,
+     "Elo_lo": 170,
+     "Elo_hi": 655,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 214,
-     "Elo_lo": -99,
-     "Elo_hi": 430,
+     "Elo": 199,
+     "Elo_lo": -119,
+     "Elo_hi": 422,
      "n_targets": 14
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": -1415,
-     "Elo_lo": -1781,
-     "Elo_hi": -1103,
+     "Elo": -1426,
+     "Elo_lo": -1829,
+     "Elo_hi": -1134,
      "n_targets": 19
     }
    ],
@@ -2683,7 +2695,7 @@
      "category": "Tabular Foundation",
      "Elo": 1062,
      "Elo_lo": 911,
-     "Elo_hi": 1222,
+     "Elo_hi": 1221,
      "n_targets": 19
     },
     {
@@ -2699,17 +2711,17 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 982,
+     "Elo": 983,
      "Elo_lo": 802,
-     "Elo_hi": 1122,
+     "Elo_hi": 1120,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 788,
-     "Elo_lo": 461,
+     "Elo": 791,
+     "Elo_lo": 470,
      "Elo_hi": 954,
      "n_targets": 19
     },
@@ -2717,72 +2729,72 @@
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 768,
-     "Elo_lo": 473,
-     "Elo_hi": 931,
+     "Elo": 765,
+     "Elo_lo": 475,
+     "Elo_hi": 928,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 766,
-     "Elo_lo": 429,
-     "Elo_hi": 938,
-     "n_targets": 16
+     "Elo": 723,
+     "Elo_lo": 376,
+     "Elo_hi": 911,
+     "n_targets": 19
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 701,
-     "Elo_lo": 351,
-     "Elo_hi": 879,
+     "Elo": 707,
+     "Elo_lo": 360,
+     "Elo_hi": 881,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 405,
-     "Elo_lo": 44,
-     "Elo_hi": 670,
+     "Elo": 410,
+     "Elo_lo": 92,
+     "Elo_hi": 667,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 338,
-     "Elo_lo": 33,
-     "Elo_hi": 545,
+     "Elo": 370,
+     "Elo_lo": 68,
+     "Elo_hi": 567,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 194,
-     "Elo_lo": -165,
-     "Elo_hi": 437,
+     "Elo": 223,
+     "Elo_lo": -122,
+     "Elo_hi": 453,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 113,
-     "Elo_lo": -242,
-     "Elo_hi": 445,
+     "Elo": 119,
+     "Elo_lo": -209,
+     "Elo_hi": 446,
      "n_targets": 16
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": -319,
-     "Elo_lo": -694,
-     "Elo_hi": -75,
+     "Elo": -301,
+     "Elo_lo": -641,
+     "Elo_hi": -66,
      "n_targets": 19
     }
    ],
@@ -2903,7 +2915,7 @@
      "category": "Tabular Foundation",
      "Elo": 1463,
      "Elo_lo": 1258,
-     "Elo_hi": 2742,
+     "Elo_hi": 2785,
      "n_targets": 19
     },
     {
@@ -2919,7 +2931,7 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 894,
+     "Elo": 895,
      "Elo_lo": 665,
      "Elo_hi": 1011,
      "n_targets": 18
@@ -2928,81 +2940,81 @@
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 609,
-     "Elo_lo": 37,
-     "Elo_hi": 817,
+     "Elo": 611,
+     "Elo_lo": 43,
+     "Elo_hi": 818,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 497,
-     "Elo_lo": -59,
-     "Elo_hi": 706,
+     "Elo": 496,
+     "Elo_lo": -71,
+     "Elo_hi": 700,
      "n_targets": 19
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 455,
-     "Elo_lo": -90,
-     "Elo_hi": 625,
+     "Elo": 453,
+     "Elo_lo": -88,
+     "Elo_hi": 622,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 429,
-     "Elo_lo": -245,
-     "Elo_hi": 668,
-     "n_targets": 16
-    },
-    {
-     "model_id": "LOCAL-QWEN3-30B-A3B",
-     "display": "Qwen3 30B-A3B (Ollama H100)",
-     "category": "Qwen",
-     "Elo": 88,
-     "Elo_lo": -507,
-     "Elo_hi": 308,
-     "n_targets": 16
+     "Elo": 389,
+     "Elo_lo": -243,
+     "Elo_hi": 625,
+     "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 64,
-     "Elo_lo": -499,
-     "Elo_hi": 302,
+     "Elo": 108,
+     "Elo_lo": -476,
+     "Elo_hi": 337,
      "n_targets": 19
     },
     {
-     "model_id": "LOCAL-MISTRAL-7B-FP16",
-     "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
-     "category": "Mistral",
-     "Elo": -99,
-     "Elo_lo": -733,
-     "Elo_hi": 191,
-     "n_targets": 14
+     "model_id": "LOCAL-QWEN3-30B-A3B",
+     "display": "Qwen3 30B-A3B (Ollama H100)",
+     "category": "Qwen",
+     "Elo": 104,
+     "Elo_lo": -497,
+     "Elo_hi": 317,
+     "n_targets": 16
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": -101,
-     "Elo_lo": -750,
-     "Elo_hi": 123,
+     "Elo": -54,
+     "Elo_lo": -740,
+     "Elo_hi": 189,
      "n_targets": 17
+    },
+    {
+     "model_id": "LOCAL-MISTRAL-7B-FP16",
+     "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
+     "category": "Mistral",
+     "Elo": -76,
+     "Elo_lo": -722,
+     "Elo_hi": 210,
+     "n_targets": 14
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": -705,
-     "Elo_lo": -2138,
-     "Elo_hi": -323,
+     "Elo": -696,
+     "Elo_lo": -2065,
+     "Elo_hi": -312,
      "n_targets": 19
     }
    ],
@@ -3011,45 +3023,45 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1302,
-     "Elo_lo": 1191,
-     "Elo_hi": 1435,
+     "Elo": 1300,
+     "Elo_lo": 1187,
+     "Elo_hi": 1437,
      "n_targets": 33
-    },
-    {
-     "model_id": "QWEN",
-     "display": "Qwen 3.6 35B-A3B (MLCloud)",
-     "category": "Qwen",
-     "Elo": 1084,
-     "Elo_lo": 963,
-     "Elo_hi": 1163,
-     "n_targets": 30
     },
     {
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1073,
-     "Elo_lo": 941,
-     "Elo_hi": 1224,
+     "Elo": 1078,
+     "Elo_lo": 955,
+     "Elo_hi": 1237,
      "n_targets": 31
+    },
+    {
+     "model_id": "QWEN",
+     "display": "Qwen 3.6 35B-A3B (MLCloud)",
+     "category": "Qwen",
+     "Elo": 1072,
+     "Elo_lo": 966,
+     "Elo_hi": 1153,
+     "n_targets": 30
     },
     {
      "model_id": "REALTABPFN-V2",
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
-     "Elo": 1028,
-     "Elo_lo": 945,
-     "Elo_hi": 1099,
+     "Elo": 1027,
+     "Elo_lo": 950,
+     "Elo_hi": 1094,
      "n_targets": 38
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 1014,
-     "Elo_lo": 912,
-     "Elo_hi": 1098,
+     "Elo": 1010,
+     "Elo_lo": 910,
+     "Elo_hi": 1091,
      "n_targets": 31
     },
     {
@@ -3062,48 +3074,57 @@
      "n_targets": 38
     },
     {
+     "model_id": "LOCAL-GEMMA-3-27B",
+     "display": "Gemma 3 27B (Ollama H100)",
+     "category": "Gemma",
+     "Elo": 945,
+     "Elo_lo": 820,
+     "Elo_hi": 1083,
+     "n_targets": 31
+    },
+    {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 874,
-     "Elo_lo": 785,
-     "Elo_hi": 999,
+     "Elo": 878,
+     "Elo_lo": 793,
+     "Elo_hi": 994,
      "n_targets": 31
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 733,
-     "Elo_lo": 616,
-     "Elo_hi": 808,
+     "Elo": 742,
+     "Elo_lo": 641,
+     "Elo_hi": 817,
      "n_targets": 31
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 703,
-     "Elo_lo": 537,
-     "Elo_hi": 842,
+     "Elo": 719,
+     "Elo_lo": 575,
+     "Elo_hi": 847,
      "n_targets": 30
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 622,
-     "Elo_lo": 428,
-     "Elo_hi": 767,
+     "Elo": 647,
+     "Elo_lo": 510,
+     "Elo_hi": 773,
      "n_targets": 11
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 535,
-     "Elo_lo": 339,
-     "Elo_hi": 702,
+     "Elo": 558,
+     "Elo_lo": 376,
+     "Elo_hi": 710,
      "n_targets": 38
     }
    ],
@@ -3112,45 +3133,45 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1167,
-     "Elo_lo": 1077,
-     "Elo_hi": 1280,
+     "Elo": 1164,
+     "Elo_lo": 1076,
+     "Elo_hi": 1274,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1105,
-     "Elo_lo": 928,
-     "Elo_hi": 1275,
+     "Elo": 1100,
+     "Elo_lo": 925,
+     "Elo_hi": 1268,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 1104,
-     "Elo_lo": 950,
-     "Elo_hi": 1318,
-     "n_targets": 16
-    },
-    {
-     "model_id": "QWEN",
-     "display": "Qwen 3.6 35B-A3B (MLCloud)",
-     "category": "Qwen",
-     "Elo": 1079,
-     "Elo_lo": 924,
-     "Elo_hi": 1245,
+     "Elo": 1083,
+     "Elo_lo": 898,
+     "Elo_hi": 1304,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 1072,
-     "Elo_lo": 910,
-     "Elo_hi": 1223,
+     "Elo": 1076,
+     "Elo_lo": 912,
+     "Elo_hi": 1226,
+     "n_targets": 19
+    },
+    {
+     "model_id": "QWEN",
+     "display": "Qwen 3.6 35B-A3B (MLCloud)",
+     "category": "Qwen",
+     "Elo": 1076,
+     "Elo_lo": 926,
+     "Elo_hi": 1242,
      "n_targets": 19
     },
     {
@@ -3167,53 +3188,53 @@
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
      "Elo": 996,
-     "Elo_lo": 874,
-     "Elo_hi": 1120,
+     "Elo_lo": 878,
+     "Elo_hi": 1118,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 891,
-     "Elo_lo": 778,
-     "Elo_hi": 991,
+     "Elo": 889,
+     "Elo_lo": 785,
+     "Elo_hi": 987,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 875,
-     "Elo_lo": 718,
-     "Elo_hi": 1019,
+     "Elo": 874,
+     "Elo_lo": 716,
+     "Elo_hi": 1018,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 771,
-     "Elo_lo": 617,
-     "Elo_hi": 953,
+     "Elo": 768,
+     "Elo_lo": 611,
+     "Elo_hi": 952,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 581,
-     "Elo_lo": 346,
-     "Elo_hi": 769,
+     "Elo": 587,
+     "Elo_lo": 365,
+     "Elo_hi": 766,
      "n_targets": 19
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 479,
-     "Elo_lo": 158,
-     "Elo_hi": 658,
+     "Elo": 480,
+     "Elo_lo": 168,
+     "Elo_hi": 654,
      "n_targets": 19
     }
    ],
@@ -3222,36 +3243,27 @@
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1096,
-     "Elo_lo": 951,
-     "Elo_hi": 1252,
+     "Elo": 1094,
+     "Elo_lo": 952,
+     "Elo_hi": 1248,
      "n_targets": 19
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 1049,
-     "Elo_lo": 872,
-     "Elo_hi": 1208,
+     "Elo": 1044,
+     "Elo_lo": 862,
+     "Elo_hi": 1207,
      "n_targets": 19
     },
     {
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1039,
-     "Elo_lo": 919,
-     "Elo_hi": 1185,
-     "n_targets": 19
-    },
-    {
-     "model_id": "LOCAL-QWEN3-32B-FP8",
-     "display": "Qwen3 32B (Ollama H100)",
-     "category": "Qwen",
-     "Elo": 1008,
-     "Elo_lo": 812,
-     "Elo_hi": 1148,
+     "Elo": 1032,
+     "Elo_lo": 918,
+     "Elo_hi": 1180,
      "n_targets": 19
     },
     {
@@ -3259,8 +3271,8 @@
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
      "Elo": 1005,
-     "Elo_lo": 918,
-     "Elo_hi": 1112,
+     "Elo_lo": 920,
+     "Elo_hi": 1110,
      "n_targets": 19
     },
     {
@@ -3273,39 +3285,48 @@
      "n_targets": 19
     },
     {
+     "model_id": "LOCAL-QWEN3-32B-FP8",
+     "display": "Qwen3 32B (Ollama H100)",
+     "category": "Qwen",
+     "Elo": 1000,
+     "Elo_lo": 811,
+     "Elo_hi": 1143,
+     "n_targets": 19
+    },
+    {
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 931,
-     "Elo_lo": 702,
-     "Elo_hi": 1150,
-     "n_targets": 16
+     "Elo": 901,
+     "Elo_lo": 666,
+     "Elo_hi": 1132,
+     "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 730,
-     "Elo_lo": 438,
-     "Elo_hi": 875,
+     "Elo": 740,
+     "Elo_lo": 470,
+     "Elo_hi": 878,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 644,
-     "Elo_lo": 335,
-     "Elo_hi": 865,
+     "Elo": 634,
+     "Elo_lo": 345,
+     "Elo_hi": 862,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 613,
-     "Elo_lo": 285,
-     "Elo_hi": 811,
+     "Elo": 607,
+     "Elo_lo": 302,
+     "Elo_hi": 806,
      "n_targets": 19
     },
     {
@@ -3313,17 +3334,17 @@
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
      "Elo": 561,
-     "Elo_lo": 214,
-     "Elo_hi": 792,
+     "Elo_lo": 220,
+     "Elo_hi": 785,
      "n_targets": 14
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 234,
-     "Elo_lo": -93,
-     "Elo_hi": 484,
+     "Elo": 243,
+     "Elo_lo": -64,
+     "Elo_hi": 493,
      "n_targets": 19
     }
    ],
@@ -3332,9 +3353,9 @@
      "model_id": "REALTABPFN-V2",
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
-     "Elo": 1151,
+     "Elo": 1150,
      "Elo_lo": 968,
-     "Elo_hi": 1328,
+     "Elo_hi": 1326,
      "n_targets": 19
     },
     {
@@ -3352,24 +3373,24 @@
      "category": "Gemma",
      "Elo": 991,
      "Elo_lo": 787,
-     "Elo_hi": 1159,
+     "Elo_hi": 1158,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 815,
-     "Elo_lo": 518,
-     "Elo_hi": 1029,
+     "Elo": 808,
+     "Elo_lo": 510,
+     "Elo_hi": 1019,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 808,
-     "Elo_lo": 528,
+     "Elo": 807,
+     "Elo_lo": 518,
      "Elo_hi": 977,
      "n_targets": 19
     },
@@ -3377,26 +3398,26 @@
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 796,
-     "Elo_lo": 444,
-     "Elo_hi": 982,
-     "n_targets": 16
+     "Elo": 764,
+     "Elo_lo": 436,
+     "Elo_hi": 965,
+     "n_targets": 19
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 748,
-     "Elo_lo": 423,
-     "Elo_hi": 952,
+     "Elo": 746,
+     "Elo_lo": 416,
+     "Elo_hi": 946,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 481,
-     "Elo_lo": 221,
+     "Elo": 480,
+     "Elo_lo": 230,
      "Elo_hi": 700,
      "n_targets": 19
     },
@@ -3404,36 +3425,36 @@
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 458,
+     "Elo": 455,
      "Elo_lo": 132,
-     "Elo_hi": 712,
+     "Elo_hi": 706,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 358,
-     "Elo_lo": 13,
-     "Elo_hi": 583,
+     "Elo": 354,
+     "Elo_lo": 26,
+     "Elo_hi": 584,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 323,
-     "Elo_lo": 26,
-     "Elo_hi": 554,
+     "Elo": 320,
+     "Elo_lo": 31,
+     "Elo_hi": 553,
      "n_targets": 16
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 98,
-     "Elo_lo": -246,
-     "Elo_hi": 337,
+     "Elo": 100,
+     "Elo_lo": -230,
+     "Elo_hi": 354,
      "n_targets": 19
     }
    ],
@@ -3552,9 +3573,9 @@
      "model_id": "REALTABPFN-V2",
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
-     "Elo": 1421,
-     "Elo_lo": 1238,
-     "Elo_hi": 2732,
+     "Elo": 1420,
+     "Elo_lo": 1237,
+     "Elo_hi": 2728,
      "n_targets": 19
     },
     {
@@ -3570,27 +3591,27 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 864,
-     "Elo_lo": 615,
+     "Elo": 863,
+     "Elo_lo": 593,
      "Elo_hi": 1017,
      "n_targets": 18
-    },
-    {
-     "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
-     "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
-     "category": "Mistral",
-     "Elo": 580,
-     "Elo_lo": 169,
-     "Elo_hi": 785,
-     "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
      "Elo": 579,
-     "Elo_lo": 231,
-     "Elo_hi": 810,
+     "Elo_lo": 235,
+     "Elo_hi": 803,
+     "n_targets": 19
+    },
+    {
+     "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
+     "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
+     "category": "Mistral",
+     "Elo": 560,
+     "Elo_lo": 157,
+     "Elo_hi": 769,
      "n_targets": 19
     },
     {
@@ -3598,62 +3619,62 @@
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
      "Elo": 542,
-     "Elo_lo": 193,
-     "Elo_hi": 702,
+     "Elo_lo": 191,
+     "Elo_hi": 699,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 538,
-     "Elo_lo": 83,
-     "Elo_hi": 798,
-     "n_targets": 16
+     "Elo": 539,
+     "Elo_lo": 97,
+     "Elo_hi": 783,
+     "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 235,
-     "Elo_lo": -227,
-     "Elo_hi": 505,
+     "Elo": 242,
+     "Elo_lo": -226,
+     "Elo_hi": 509,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 211,
-     "Elo_lo": -253,
-     "Elo_hi": 402,
+     "Elo": 218,
+     "Elo_lo": -249,
+     "Elo_hi": 405,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 100,
-     "Elo_lo": -319,
-     "Elo_hi": 386,
+     "Elo": 114,
+     "Elo_lo": -311,
+     "Elo_hi": 394,
      "n_targets": 17
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 93,
-     "Elo_lo": -375,
-     "Elo_hi": 400,
+     "Elo": 101,
+     "Elo_lo": -385,
+     "Elo_hi": 399,
      "n_targets": 14
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": -170,
-     "Elo_lo": -676,
-     "Elo_hi": 213,
+     "Elo": -146,
+     "Elo_lo": -675,
+     "Elo_hi": 236,
      "n_targets": 19
     }
    ],
@@ -3662,9 +3683,9 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1224,
-     "Elo_lo": 1116,
-     "Elo_hi": 1355,
+     "Elo": 1215,
+     "Elo_lo": 1109,
+     "Elo_hi": 1329,
      "n_targets": 33
     },
     {
@@ -3677,84 +3698,93 @@
      "n_targets": 38
     },
     {
+     "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
+     "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
+     "category": "Mistral",
+     "Elo": 992,
+     "Elo_lo": 878,
+     "Elo_hi": 1118,
+     "n_targets": 31
+    },
+    {
      "model_id": "REALTABPFN-V2",
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
      "Elo": 991,
-     "Elo_lo": 924,
-     "Elo_hi": 1063,
+     "Elo_lo": 934,
+     "Elo_hi": 1056,
      "n_targets": 38
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 988,
-     "Elo_lo": 874,
-     "Elo_hi": 1067,
+     "Elo": 990,
+     "Elo_lo": 879,
+     "Elo_hi": 1060,
      "n_targets": 30
-    },
-    {
-     "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
-     "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
-     "category": "Mistral",
-     "Elo": 982,
-     "Elo_lo": 863,
-     "Elo_hi": 1110,
-     "n_targets": 31
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 946,
-     "Elo_lo": 802,
-     "Elo_hi": 1037,
+     "Elo": 948,
+     "Elo_lo": 819,
+     "Elo_hi": 1036,
+     "n_targets": 31
+    },
+    {
+     "model_id": "LOCAL-GEMMA-3-27B",
+     "display": "Gemma 3 27B (Ollama H100)",
+     "category": "Gemma",
+     "Elo": 875,
+     "Elo_lo": 767,
+     "Elo_hi": 1026,
      "n_targets": 31
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 810,
-     "Elo_lo": 713,
-     "Elo_hi": 928,
+     "Elo": 819,
+     "Elo_lo": 725,
+     "Elo_hi": 929,
      "n_targets": 31
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 708,
-     "Elo_lo": 550,
-     "Elo_hi": 807,
+     "Elo": 726,
+     "Elo_lo": 583,
+     "Elo_hi": 817,
      "n_targets": 31
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 681,
-     "Elo_lo": 493,
-     "Elo_hi": 801,
+     "Elo": 688,
+     "Elo_lo": 520,
+     "Elo_hi": 807,
      "n_targets": 30
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 524,
-     "Elo_lo": 349,
-     "Elo_hi": 651,
+     "Elo": 543,
+     "Elo_lo": 373,
+     "Elo_hi": 661,
      "n_targets": 11
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 478,
-     "Elo_lo": 257,
-     "Elo_hi": 649,
+     "Elo": 501,
+     "Elo_lo": 305,
+     "Elo_hi": 659,
      "n_targets": 38
     }
    ],
@@ -3763,45 +3793,45 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1135,
-     "Elo_lo": 1051,
-     "Elo_hi": 1245,
+     "Elo": 1134,
+     "Elo_lo": 1050,
+     "Elo_hi": 1241,
      "n_targets": 19
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 1087,
-     "Elo_lo": 931,
-     "Elo_hi": 1244,
+     "Elo": 1085,
+     "Elo_lo": 932,
+     "Elo_hi": 1240,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 1079,
-     "Elo_lo": 935,
-     "Elo_hi": 1289,
-     "n_targets": 16
+     "Elo": 1056,
+     "Elo_lo": 877,
+     "Elo_hi": 1265,
+     "n_targets": 19
     },
     {
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1052,
-     "Elo_lo": 897,
-     "Elo_hi": 1220,
+     "Elo": 1043,
+     "Elo_lo": 894,
+     "Elo_hi": 1215,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 1023,
-     "Elo_lo": 863,
-     "Elo_hi": 1151,
+     "Elo": 1022,
+     "Elo_lo": 867,
+     "Elo_hi": 1149,
      "n_targets": 19
     },
     {
@@ -3818,7 +3848,7 @@
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
      "Elo": 996,
-     "Elo_lo": 880,
+     "Elo_lo": 884,
      "Elo_hi": 1106,
      "n_targets": 19
     },
@@ -3826,45 +3856,45 @@
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 887,
-     "Elo_lo": 797,
-     "Elo_hi": 972,
+     "Elo": 885,
+     "Elo_lo": 795,
+     "Elo_hi": 969,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 870,
-     "Elo_lo": 696,
-     "Elo_hi": 1003,
+     "Elo": 868,
+     "Elo_lo": 694,
+     "Elo_hi": 1002,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 738,
-     "Elo_lo": 545,
-     "Elo_hi": 943,
+     "Elo": 742,
+     "Elo_lo": 548,
+     "Elo_hi": 942,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 625,
-     "Elo_lo": 408,
-     "Elo_hi": 800,
+     "Elo": 636,
+     "Elo_lo": 423,
+     "Elo_hi": 796,
      "n_targets": 19
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 499,
-     "Elo_lo": 223,
-     "Elo_hi": 676,
+     "Elo": 507,
+     "Elo_lo": 252,
+     "Elo_hi": 681,
      "n_targets": 19
     }
    ],
@@ -3873,27 +3903,27 @@
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 1137,
+     "Elo": 1136,
      "Elo_lo": 988,
-     "Elo_hi": 1301,
+     "Elo_hi": 1296,
      "n_targets": 19
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 1077,
-     "Elo_lo": 902,
-     "Elo_hi": 1241,
+     "Elo": 1073,
+     "Elo_lo": 893,
+     "Elo_hi": 1240,
      "n_targets": 19
     },
     {
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 1054,
-     "Elo_lo": 936,
-     "Elo_hi": 1204,
+     "Elo": 1049,
+     "Elo_lo": 934,
+     "Elo_hi": 1202,
      "n_targets": 19
     },
     {
@@ -3901,17 +3931,17 @@
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
      "Elo": 1044,
-     "Elo_lo": 966,
-     "Elo_hi": 1161,
+     "Elo_lo": 967,
+     "Elo_hi": 1158,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 1029,
-     "Elo_lo": 843,
-     "Elo_hi": 1152,
+     "Elo": 1020,
+     "Elo_lo": 835,
+     "Elo_hi": 1147,
      "n_targets": 19
     },
     {
@@ -3927,17 +3957,17 @@
      "model_id": "LOCAL-GEMMA-3-27B",
      "display": "Gemma 3 27B (Ollama H100)",
      "category": "Gemma",
-     "Elo": 985,
-     "Elo_lo": 736,
-     "Elo_hi": 1204,
-     "n_targets": 16
+     "Elo": 954,
+     "Elo_lo": 711,
+     "Elo_hi": 1177,
+     "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 815,
-     "Elo_lo": 534,
+     "Elo": 822,
+     "Elo_lo": 556,
      "Elo_hi": 966,
      "n_targets": 19
     },
@@ -3945,36 +3975,36 @@
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 736,
-     "Elo_lo": 481,
-     "Elo_hi": 913,
+     "Elo": 729,
+     "Elo_lo": 482,
+     "Elo_hi": 910,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 639,
-     "Elo_lo": 355,
-     "Elo_hi": 828,
+     "Elo": 635,
+     "Elo_lo": 354,
+     "Elo_hi": 825,
      "n_targets": 14
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 613,
-     "Elo_lo": 330,
-     "Elo_hi": 805,
+     "Elo": 607,
+     "Elo_lo": 331,
+     "Elo_hi": 800,
      "n_targets": 19
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 249,
-     "Elo_lo": -80,
-     "Elo_hi": 495,
+     "Elo": 262,
+     "Elo_lo": -69,
+     "Elo_hi": 510,
      "n_targets": 19
     }
    ],
@@ -3985,7 +4015,7 @@
      "category": "Tabular Foundation",
      "Elo": 1176,
      "Elo_lo": 976,
-     "Elo_hi": 1433,
+     "Elo_hi": 1432,
      "n_targets": 19
     },
     {
@@ -4002,7 +4032,7 @@
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
      "Elo": 970,
-     "Elo_lo": 741,
+     "Elo_lo": 742,
      "Elo_hi": 1126,
      "n_targets": 19
     },
@@ -4010,81 +4040,81 @@
      "model_id": "LOCAL-MISTRAL-SMALL-3.1-24B-FP16",
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 811,
-     "Elo_lo": 502,
-     "Elo_hi": 986,
-     "n_targets": 19
-    },
-    {
-     "model_id": "LOCAL-GEMMA-3-27B",
-     "display": "Gemma 3 27B (Ollama H100)",
-     "category": "Gemma",
-     "Elo": 786,
-     "Elo_lo": 434,
-     "Elo_hi": 1003,
-     "n_targets": 16
-    },
-    {
-     "model_id": "QWEN",
-     "display": "Qwen 3.6 35B-A3B (MLCloud)",
-     "category": "Qwen",
-     "Elo": 782,
-     "Elo_lo": 433,
-     "Elo_hi": 988,
+     "Elo": 803,
+     "Elo_lo": 485,
+     "Elo_hi": 983,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 781,
-     "Elo_lo": 443,
-     "Elo_hi": 986,
+     "Elo": 779,
+     "Elo_lo": 441,
+     "Elo_hi": 981,
+     "n_targets": 19
+    },
+    {
+     "model_id": "LOCAL-GEMMA-3-27B",
+     "display": "Gemma 3 27B (Ollama H100)",
+     "category": "Gemma",
+     "Elo": 772,
+     "Elo_lo": 440,
+     "Elo_hi": 979,
+     "n_targets": 19
+    },
+    {
+     "model_id": "QWEN",
+     "display": "Qwen 3.6 35B-A3B (MLCloud)",
+     "category": "Qwen",
+     "Elo": 768,
+     "Elo_lo": 415,
+     "Elo_hi": 973,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 501,
-     "Elo_lo": 163,
-     "Elo_hi": 721,
+     "Elo": 498,
+     "Elo_lo": 176,
+     "Elo_hi": 720,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-30B-A3B",
      "display": "Qwen3 30B-A3B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 473,
-     "Elo_lo": 85,
-     "Elo_hi": 713,
+     "Elo": 475,
+     "Elo_lo": 96,
+     "Elo_hi": 706,
      "n_targets": 16
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 363,
-     "Elo_lo": -49,
-     "Elo_hi": 556,
+     "Elo": 362,
+     "Elo_lo": -37,
+     "Elo_hi": 563,
      "n_targets": 19
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 317,
-     "Elo_lo": -70,
-     "Elo_hi": 565,
+     "Elo": 323,
+     "Elo_lo": -61,
+     "Elo_hi": 564,
      "n_targets": 16
     },
     {
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": 134,
-     "Elo_lo": -265,
-     "Elo_hi": 372,
+     "Elo": 152,
+     "Elo_lo": -243,
+     "Elo_hi": 388,
      "n_targets": 19
     }
    ],
@@ -4203,9 +4233,9 @@
      "model_id": "REALTABPFN-V2",
      "display": "TabPFN v2",
      "category": "Tabular Foundation",
-     "Elo": 1380,
+     "Elo": 1379,
      "Elo_lo": 1200,
-     "Elo_hi": 2730,
+     "Elo_hi": 2676,
      "n_targets": 19
     },
     {
@@ -4221,8 +4251,8 @@
      "model_id": "GEMMA",
      "display": "Gemma 4 31B (MLCloud)",
      "category": "Gemma",
-     "Elo": 833,
-     "Elo_lo": 502,
+     "Elo": 826,
+     "Elo_lo": 488,
      "Elo_hi": 990,
      "n_targets": 18
     },
@@ -4230,9 +4260,9 @@
      "model_id": "LOCAL-QWEN3-32B-FP8",
      "display": "Qwen3 32B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 563,
-     "Elo_lo": 138,
-     "Elo_hi": 796,
+     "Elo": 565,
+     "Elo_lo": 154,
+     "Elo_hi": 793,
      "n_targets": 19
     },
     {
@@ -4240,61 +4270,61 @@
      "display": "Mistral Small 3.1 24B FP16 (Ollama H100)",
      "category": "Mistral",
      "Elo": 552,
-     "Elo_lo": 101,
-     "Elo_hi": 748,
+     "Elo_lo": 93,
+     "Elo_hi": 739,
      "n_targets": 19
-    },
-    {
-     "model_id": "LOCAL-GEMMA-3-27B",
-     "display": "Gemma 3 27B (Ollama H100)",
-     "category": "Gemma",
-     "Elo": 540,
-     "Elo_lo": 45,
-     "Elo_hi": 817,
-     "n_targets": 16
     },
     {
      "model_id": "QWEN",
      "display": "Qwen 3.6 35B-A3B (MLCloud)",
      "category": "Qwen",
-     "Elo": 527,
-     "Elo_lo": 156,
-     "Elo_hi": 690,
+     "Elo": 524,
+     "Elo_lo": 166,
+     "Elo_hi": 688,
      "n_targets": 16
+    },
+    {
+     "model_id": "LOCAL-GEMMA-3-27B",
+     "display": "Gemma 3 27B (Ollama H100)",
+     "category": "Gemma",
+     "Elo": 521,
+     "Elo_lo": 44,
+     "Elo_hi": 780,
+     "n_targets": 19
     },
     {
      "model_id": "LOCAL-QWEN3-8B",
      "display": "Qwen3 8B (Ollama H100)",
      "category": "Qwen",
-     "Elo": 247,
-     "Elo_lo": -185,
-     "Elo_hi": 519,
+     "Elo": 250,
+     "Elo_lo": -173,
+     "Elo_hi": 525,
      "n_targets": 19
-    },
-    {
-     "model_id": "LOCAL-QWEN3-30B-A3B",
-     "display": "Qwen3 30B-A3B (Ollama H100)",
-     "category": "Qwen",
-     "Elo": 193,
-     "Elo_lo": -321,
-     "Elo_hi": 390,
-     "n_targets": 16
     },
     {
      "model_id": "LOCAL-LLAMA-3.1-8B",
      "display": "Llama 3.1 8B (Ollama H100)",
      "category": "Llama",
-     "Elo": 178,
-     "Elo_lo": -222,
-     "Elo_hi": 429,
+     "Elo": 200,
+     "Elo_lo": -192,
+     "Elo_hi": 444,
      "n_targets": 17
+    },
+    {
+     "model_id": "LOCAL-QWEN3-30B-A3B",
+     "display": "Qwen3 30B-A3B (Ollama H100)",
+     "category": "Qwen",
+     "Elo": 196,
+     "Elo_lo": -290,
+     "Elo_hi": 393,
+     "n_targets": 16
     },
     {
      "model_id": "LOCAL-MISTRAL-7B-FP16",
      "display": "Mistral 7B v0.3 FP16 (Ollama H100)",
      "category": "Mistral",
-     "Elo": 112,
-     "Elo_lo": -436,
+     "Elo": 114,
+     "Elo_lo": -425,
      "Elo_hi": 433,
      "n_targets": 14
     },
@@ -4302,9 +4332,9 @@
      "model_id": "DUMMY",
      "display": "Random",
      "category": "Baseline",
-     "Elo": -180,
-     "Elo_lo": -704,
-     "Elo_hi": 180,
+     "Elo": -162,
+     "Elo_lo": -701,
+     "Elo_hi": 216,
      "n_targets": 19
     }
    ],
@@ -4892,7 +4922,7 @@
          null
         ],
         [
-         null,
+         0.5252486450608089,
          0.4898756266067562
         ],
         [
@@ -5160,7 +5190,7 @@
          null
         ],
         [
-         null,
+         0.5718085106382979,
          0.5035460992907801
         ],
         [
@@ -5428,7 +5458,7 @@
          null
         ],
         [
-         null,
+         0.0790618905114544,
          -0.0053598983845099
         ],
         [
@@ -5768,7 +5798,7 @@
          null
         ],
         [
-         null,
+         0.4365794819705434,
          0.4951522311103405
         ],
         [
@@ -6014,7 +6044,7 @@
          null
         ],
         [
-         null,
+         0.484375,
          0.51875
         ],
         [
@@ -6260,7 +6290,7 @@
          null
         ],
         [
-         null,
+         -0.0761569816894631,
          0.0544150901349227
         ],
         [
@@ -6860,7 +6890,7 @@
          null
         ],
         [
-         null,
+         0.4764397905759162,
          0.4764397905759162
         ],
         [
@@ -7128,7 +7158,7 @@
          null
         ],
         [
-         null,
+         0.5,
          0.5
         ],
         [
@@ -7396,7 +7426,7 @@
          null
         ],
         [
-         null,
+         0.0,
          0.0
         ],
         [
@@ -7736,7 +7766,7 @@
          null
         ],
         [
-         null,
+         0.4468193134171907,
          0.4483194646223721
         ],
         [
@@ -7982,7 +8012,7 @@
          null
         ],
         [
-         null,
+         0.4791666666666666,
          0.4991666666666667
         ],
         [
@@ -8228,7 +8258,7 @@
          null
         ],
         [
-         null,
+         -0.0708590205217054,
          0.0075719748553285
         ],
         [
@@ -8546,7 +8576,7 @@
          null
         ],
         [
-         null,
+         0.4522607920234923,
          0.5739840049888689
         ],
         [
@@ -8792,7 +8822,7 @@
          null
         ],
         [
-         null,
+         0.4880952380952381,
          0.579047619047619
         ],
         [
@@ -9038,7 +9068,7 @@
          null
         ],
         [
-         null,
+         -0.0404038174770162,
          0.1880956887977503
         ],
         [
@@ -9356,7 +9386,7 @@
          null
         ],
         [
-         null,
+         0.6306827466745106,
          0.6217300304816289
         ],
         [
@@ -9602,7 +9632,7 @@
          null
         ],
         [
-         null,
+         0.6213517665130568,
          0.6081413210445469
         ],
         [
@@ -9848,7 +9878,7 @@
          null
         ],
         [
-         null,
+         0.2643353625756231,
          0.2774633945619306
         ],
         [
@@ -10166,7 +10196,7 @@
          null
         ],
         [
-         null,
+         0.5465543051488451,
          0.5839341260013075
         ],
         [
@@ -10412,7 +10442,7 @@
          null
         ],
         [
-         null,
+         0.5666666666666667,
          0.584
         ],
         [
@@ -10658,7 +10688,7 @@
          null
         ],
         [
-         null,
+         0.1515828003470383,
          0.2009424389023065
         ],
         [
@@ -10976,7 +11006,7 @@
          null
         ],
         [
-         null,
+         0.4680851063829787,
          0.4970435246586888
         ],
         [
@@ -11244,7 +11274,7 @@
          null
         ],
         [
-         null,
+         0.5,
          0.5132575757575758
         ],
         [
@@ -11512,7 +11542,7 @@
          null
         ],
         [
-         null,
+         0.0,
          0.0772929537199149
         ],
         [
@@ -11852,7 +11882,7 @@
          null
         ],
         [
-         null,
+         0.1420454545454545,
          0.1126611349601784
         ],
         [
@@ -12098,7 +12128,7 @@
          null
         ],
         [
-         null,
+         0.1412748643761302,
          0.1200271247739601
         ],
         [
@@ -12344,7 +12374,7 @@
          null
         ],
         [
-         null,
+         0.1540665277638517,
          0.030554149113303
         ],
         [
@@ -12662,7 +12692,7 @@
          null
         ],
         [
-         null,
+         0.6935648621041879,
          0.6642612481434287
         ],
         [
@@ -12930,7 +12960,7 @@
          null
         ],
         [
-         null,
+         0.6549019607843137,
          0.6474509803921569
         ],
         [
@@ -13198,7 +13228,7 @@
          null
         ],
         [
-         null,
+         0.4335622974557719,
          0.3725113726846941
         ],
         [
@@ -13886,7 +13916,7 @@
          null
         ],
         [
-         null,
+         0.8693742229589723,
          0.7837689120161622
         ],
         [
@@ -14154,7 +14184,7 @@
          null
         ],
         [
-         null,
+         0.8460404198109117,
          0.7559545493971724
         ],
         [
@@ -14422,7 +14452,7 @@
          null
         ],
         [
-         null,
+         0.7967448552217454,
          0.6819738137787834
         ],
         [
@@ -14762,7 +14792,7 @@
          null
         ],
         [
-         null,
+         0.7336692893717996,
          0.7578636195228359
         ],
         [
@@ -15008,7 +15038,7 @@
          null
         ],
         [
-         null,
+         0.7504166666666667,
          0.8230833333333333
         ],
         [
@@ -15254,7 +15284,7 @@
          null
         ],
         [
-         null,
+         0.6436325955682227,
          0.6564347776563157
         ],
         [
@@ -15572,7 +15602,7 @@
          null
         ],
         [
-         null,
+         0.5992540316802029,
          0.5349001473556406
         ],
         [
@@ -15818,7 +15848,7 @@
          null
         ],
         [
-         null,
+         0.5965909090909091,
          0.5412878787878788
         ],
         [
@@ -16064,7 +16094,7 @@
          null
         ],
         [
-         null,
+         0.2092040959250098,
          0.116108320161631
         ],
         [
@@ -16382,7 +16412,7 @@
          null
         ],
         [
-         null,
+         0.6028446963732745,
          0.6117446522469585
         ],
         [
@@ -16628,7 +16658,7 @@
          null
         ],
         [
-         null,
+         0.6145833333333333,
          0.6263157894736843
         ],
         [
@@ -16874,7 +16904,7 @@
          null
         ],
         [
-         null,
+         0.2127439273826731,
          0.2327543212096742
         ],
         [
@@ -17192,7 +17222,7 @@
          null
         ],
         [
-         null,
+         0.6843190828243866,
          0.6267848429218946
         ],
         [
@@ -17460,7 +17490,7 @@
          null
         ],
         [
-         null,
+         0.6399501661129567,
          0.6001661129568105
         ],
         [
@@ -17728,7 +17758,7 @@
          null
         ],
         [
-         null,
+         0.4703488149176181,
          0.3402282994555416
         ],
         [
@@ -18482,7 +18512,7 @@
          null
         ],
         [
-         null,
+         0.5075755830472811,
          0.5068085729736732
         ],
         [
@@ -18750,7 +18780,7 @@
          null
         ],
         [
-         null,
+         0.5071428571428571,
          0.5304761904761904
         ],
         [
@@ -19018,7 +19048,7 @@
          null
         ],
         [
-         null,
+         0.0201333748326712,
          0.1172852867132374
         ],
         [
@@ -19358,7 +19388,7 @@
          null
         ],
         [
-         null,
+         0.5897765025672002,
          0.5733609526612751
         ],
         [
@@ -19626,7 +19656,7 @@
          null
         ],
         [
-         null,
+         0.5847902097902098,
          0.5765734265734266
         ],
         [
@@ -19894,7 +19924,7 @@
          null
         ],
         [
-         null,
+         0.2339717622526525,
          0.1979806043888681
         ],
         [
@@ -20234,7 +20264,7 @@
          null
         ],
         [
-         null,
+         0.8168857993291898,
          0.756012700595699
         ],
         [
@@ -20502,7 +20532,7 @@
          null
         ],
         [
-         null,
+         0.8151515151515151,
          0.7545454545454545
         ],
         [
@@ -20770,7 +20800,7 @@
          null
         ],
         [
-         null,
+         0.6354625665536128,
          0.5345272375802511
         ],
         [
@@ -21110,7 +21140,7 @@
          null
         ],
         [
-         null,
+         0.7362743055555555,
          0.7178915003695492
         ],
         [
@@ -21378,7 +21408,7 @@
          null
         ],
         [
-         null,
+         0.7423076923076923,
          0.7272114160349454
         ],
         [
@@ -21646,7 +21676,7 @@
          null
         ],
         [
-         null,
+         0.4749860842448767,
          0.4415528690459545
         ],
         [
@@ -21964,7 +21994,7 @@
          null
         ],
         [
-         null,
+         0.6299138012693,
          0.7219562366621083
         ],
         [
@@ -22210,7 +22240,7 @@
          null
         ],
         [
-         null,
+         0.635,
          0.732
         ],
         [
@@ -22456,7 +22486,7 @@
          null
         ],
         [
-         null,
+         0.2795135345518645,
          0.5007696148876731
         ],
         [
@@ -22796,7 +22826,7 @@
          null
         ],
         [
-         null,
+         0.6305301355154391,
          0.6112167733409956
         ],
         [
@@ -23064,7 +23094,7 @@
          null
         ],
         [
-         null,
+         0.6428141308711361,
          0.6264552388598956
         ],
         [
@@ -23332,7 +23362,7 @@
          null
         ],
         [
-         null,
+         0.3168329720285993,
          0.289590152457798
         ],
         [
@@ -23954,7 +23984,7 @@
          null
         ],
         [
-         null,
+         0.5484880500444729,
          0.4920080375894318
         ],
         [
@@ -24222,7 +24252,7 @@
          null
         ],
         [
-         null,
+         0.5512035903712771,
          0.5209710322317421
         ],
         [
@@ -24490,7 +24520,7 @@
          null
         ],
         [
-         null,
+         0.1042841297319471,
          0.0542962851659367
         ],
         [
@@ -24830,7 +24860,7 @@
          null
         ],
         [
-         null,
+         0.4841562269712601,
          0.5548369118889752
         ],
         [
@@ -25098,7 +25128,7 @@
          null
         ],
         [
-         null,
+         0.5077972709551657,
          0.5478232618583496
         ],
         [
@@ -25366,7 +25396,7 @@
          null
         ],
         [
-         null,
+         0.0312195270527231,
          0.1366555932305541
         ],
         [
@@ -25706,7 +25736,7 @@
          null
         ],
         [
-         null,
+         0.494949494949495,
          0.494949494949495
         ],
         [
@@ -25974,7 +26004,7 @@
          null
         ],
         [
-         null,
+         0.5,
          0.5
         ],
         [
@@ -26242,7 +26272,7 @@
          null
         ],
         [
-         null,
+         0.0,
          0.0
         ],
         [
@@ -26582,7 +26612,7 @@
          null
         ],
         [
-         null,
+         0.5473362393522495,
          0.6138233560645302
         ],
         [
@@ -26850,7 +26880,7 @@
          null
         ],
         [
-         null,
+         0.5585595776772248,
          0.623631400393715
         ],
         [
@@ -27118,7 +27148,7 @@
          null
         ],
         [
-         null,
+         0.349287270778757,
          0.4286918204184782
         ],
         [
@@ -27458,7 +27488,7 @@
          null
         ],
         [
-         null,
+         0.6571428571428571,
          0.6468824586724697
         ],
         [
@@ -27726,7 +27756,7 @@
          null
         ],
         [
-         null,
+         0.6324404761904762,
          0.6541666666666666
         ],
         [
@@ -27994,7 +28024,7 @@
          null
         ],
         [
-         null,
+         0.3393191830631609,
          0.3143300576397857
         ],
         [
@@ -28660,7 +28690,7 @@
          null
         ],
         [
-         null,
+         0.648,
          0.7212603220064895
         ],
         [
@@ -28906,7 +28936,7 @@
          null
         ],
         [
-         null,
+         0.6614654002713705,
          0.7278487242929736
         ],
         [
@@ -29152,7 +29182,7 @@
          null
         ],
         [
-         null,
+         0.3076558648775641,
          0.445544016232993
         ],
         [
@@ -29492,7 +29522,7 @@
          null
         ],
         [
-         null,
+         0.5555555555555556,
          0.5410854907645966
         ],
         [
@@ -29760,7 +29790,7 @@
          null
         ],
         [
-         null,
+         0.5837173579109063,
          0.5477726574500767
         ],
         [
@@ -30028,7 +30058,7 @@
          null
         ],
         [
-         null,
+         0.1270295329132721,
          0.1017352610148979
         ],
         [
@@ -30368,7 +30398,7 @@
          null
         ],
         [
-         null,
+         0.2428571428571428,
          0.333240414157855
         ],
         [
@@ -30636,7 +30666,7 @@
          null
         ],
         [
-         null,
+         0.3151709401709401,
          0.3826923076923076
         ],
         [
@@ -30904,7 +30934,7 @@
          null
         ],
         [
-         null,
+         -0.0176749080410067,
          0.111840359203698
         ],
         [
@@ -31244,7 +31274,7 @@
          null
         ],
         [
-         null,
+         0.6314871936528398,
          0.5265442313216857
         ],
         [
@@ -31490,7 +31520,7 @@
          null
         ],
         [
-         null,
+         0.6231481481481481,
          0.5249629629629629
         ],
         [
@@ -31736,7 +31766,7 @@
          null
         ],
         [
-         null,
+         0.4713222457069461,
          0.4054805936114067
         ],
         [
@@ -42833,6 +42863,24 @@
         ]
        ]
       },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.4273678647211819
+        ],
+        [
+         0.4452673350859394
+        ],
+        [
+         0.333321480954709
+        ],
+        [
+         0.3503797116330808
+        ]
+       ]
+      },
       "LOCAL-LLAMA-3.1-8B": {
        "display": "Llama 3.1 8B (Ollama H100)",
        "category": "Llama",
@@ -43017,6 +43065,24 @@
         ]
        ]
       },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.5047971188475391
+        ],
+        [
+         0.522968387354942
+        ],
+        [
+         0.498
+        ],
+        [
+         0.5001616646658663
+        ]
+       ]
+      },
       "LOCAL-LLAMA-3.1-8B": {
        "display": "Llama 3.1 8B (Ollama H100)",
        "category": "Llama",
@@ -43198,6 +43264,24 @@
         ],
         [
          0.1216572792790638
+        ]
+       ]
+      },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         -0.0113940309858775
+        ],
+        [
+         0.0470601440512222
+        ],
+        [
+         -0.0201007563051842
+        ],
+        [
+         0.0043901197391707
         ]
        ]
       },
@@ -43445,6 +43529,24 @@
         ]
        ]
       },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.4542749187158632
+        ],
+        [
+         0.3985796463735044
+        ],
+        [
+         0.3725410062225758
+        ],
+        [
+         0.3826481730320504
+        ]
+       ]
+      },
       "LOCAL-LLAMA-3.1-8B": {
        "display": "Llama 3.1 8B (Ollama H100)",
        "category": "Llama",
@@ -43629,6 +43731,24 @@
         ]
        ]
       },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.5258495398159264
+        ],
+        [
+         0.4828003201280512
+        ],
+        [
+         0.5106026410564226
+        ],
+        [
+         0.5170876350540217
+        ]
+       ]
+      },
       "LOCAL-LLAMA-3.1-8B": {
        "display": "Llama 3.1 8B (Ollama H100)",
        "category": "Llama",
@@ -43810,6 +43930,24 @@
         ],
         [
          0.0668602617914958
+        ]
+       ]
+      },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.0910910398365217
+        ],
+        [
+         -0.0482778891760051
+        ],
+        [
+         0.0434834434216552
+        ],
+        [
+         0.0228847389199499
         ]
        ]
       },
@@ -44057,6 +44195,24 @@
         ]
        ]
       },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.4619893742648577
+        ],
+        [
+         0.4769935212252892
+        ],
+        [
+         0.4402975803801829
+        ],
+        [
+         0.3904431622067369
+        ]
+       ]
+      },
       "LOCAL-LLAMA-3.1-8B": {
        "display": "Llama 3.1 8B (Ollama H100)",
        "category": "Llama",
@@ -44241,6 +44397,24 @@
         ]
        ]
       },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.5230036014405762
+        ],
+        [
+         0.512281712685074
+        ],
+        [
+         0.5259591836734694
+        ],
+        [
+         0.496
+        ]
+       ]
+      },
       "LOCAL-LLAMA-3.1-8B": {
        "display": "Llama 3.1 8B (Ollama H100)",
        "category": "Llama",
@@ -44422,6 +44596,24 @@
         ],
         [
          -0.0366219375032205
+        ]
+       ]
+      },
+      "LOCAL-GEMMA-3-27B": {
+       "display": "Gemma 3 27B (Ollama H100)",
+       "category": "Gemma",
+       "z": [
+        [
+         0.0503821557371072
+        ],
+        [
+         0.0289331991678942
+        ],
+        [
+         0.0668032898343576
+        ],
+        [
+         -0.0254251049858342
         ]
        ]
       },
@@ -45758,7 +45950,7 @@
          null
         ],
         [
-         null,
+         0.5301455301455301,
          0.574205721507537
         ],
         [
@@ -46004,7 +46196,7 @@
          null
         ],
         [
-         null,
+         0.5429487179487179,
          0.5907692307692308
         ],
         [
@@ -46250,7 +46442,7 @@
          null
         ],
         [
-         null,
+         0.5593925489911148,
          0.649703363282669
         ],
         [
@@ -46849,9 +47041,9 @@
  },
  "meta": {
   "title": "TabBench-LLM \u2014 CURRENT-STATE PREVIEW",
-  "subtitle": "12 model(s) \u00b7 57 dataset(s) \u00b7 pass=8501 \u00b7 fail=620 \u00b7 skip=560 \u00b7 retry=395",
-  "generated": "2026-08-15 16:28 UTC",
-  "results_dir": "tabarena-partial-preview-af380wof",
+  "subtitle": "12 model(s) \u00b7 57 dataset(s) \u00b7 pass=8672 \u00b7 fail=620 \u00b7 skip=560 \u00b7 retry=224",
+  "generated": "2026-08-16 13:56 UTC",
+  "results_dir": "tabbench-partial-preview-m_8stks5",
   "n_models": 12,
   "n_datasets": 19
  }
