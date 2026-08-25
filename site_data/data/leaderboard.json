@@ -47041,9 +47041,9 @@
  },
  "meta": {
   "title": "TabBench-LLM \u2014 CURRENT-STATE PREVIEW",
-  "subtitle": "12 model(s) \u00b7 57 dataset(s) \u00b7 pass=8776 \u00b7 fail=620 \u00b7 skip=560 \u00b7 retry=120",
-  "generated": "2026-08-18 09:33 UTC",
-  "results_dir": "tabbench-partial-preview-ul6yz_2e",
+  "subtitle": "12 model(s) \u00b7 57 dataset(s) \u00b7 pass=8776 \u00b7 fail=998 \u00b7 skip=615 \u00b7 retry=120",
+  "generated": "2026-08-25 08:04 UTC",
+  "results_dir": "tabbench-partial-preview-ediy1y2z",
   "n_models": 12,
   "n_datasets": 19
  }

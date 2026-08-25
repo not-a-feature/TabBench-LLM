@@ -20,8 +20,8 @@
   "metric_rows": 8776,
   "status_counts": {
     "pass": 8776,
-    "fail": 620,
-    "skip": 560,
+    "fail": 998,
+    "skip": 615,
     "retry": 120
   },
   "reference_cell": "reason_off/labels_hidden/feat_full/n_100"
