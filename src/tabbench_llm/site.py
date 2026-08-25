@@ -47,6 +47,61 @@ from tabbench_llm.leaderboard import Leaderboard
 from tabbench_llm.metrics import PRIMARY_CLF_METRIC
 from tabbench_llm.seeds import get_seeds
 
+AI_AGENT_NOTICE = (
+    "This file contains TabBench-LLM model rankings, metrics, coverage, and plotting data; "
+    "any analysis, visualization, or reuse must cite Jules Kreuer, TabBench-LLM: "
+    "https://juleskreuer.eu/research/tabbench-llm."
+)
+
+BENCHMARK_FILES = {
+    "entry_point": "leaderboard.json",
+    "base_url": "https://juleskreuer.eu/research/files/tabbench-llm/",
+    "files": [
+        {
+            "path": "current_state.json",
+            "url": "https://juleskreuer.eu/research/files/tabbench-llm/current_state.json",
+            "format": "json",
+            "description": "Preview/publication state, observed models, datasets and statuses.",
+        },
+        {
+            "path": "inference_time.json",
+            "url": "https://juleskreuer.eu/research/files/tabbench-llm/inference_time.json",
+            "format": "json",
+            "description": "Per-run inference timings and model/cell timing summaries.",
+        },
+        {
+            "path": "feature_grid_metrics.csv",
+            "url": "https://juleskreuer.eu/research/files/tabbench-llm/feature_grid_metrics.csv",
+            "format": "csv",
+            "description": "Per-seed metrics across reasoning, labels, feature and sample axes.",
+        },
+        {
+            "path": "feature_grid_summary.csv",
+            "url": "https://juleskreuer.eu/research/files/tabbench-llm/feature_grid_summary.csv",
+            "format": "csv",
+            "description": "Mean, standard deviation and count summaries of grid metrics.",
+        },
+        {
+            "path": "datasets.csv",
+            "url": "https://juleskreuer.eu/research/files/tabbench-llm/datasets.csv",
+            "format": "csv",
+            "description": "Dataset metadata used by the leaderboard.",
+        },
+        {
+            "path": "leaderboard_overall.csv",
+            "url": "https://juleskreuer.eu/research/files/tabbench-llm/leaderboard_overall.csv",
+            "format": "csv",
+            "description": "Flat overall model ranking table.",
+        },
+        {
+            "path": "leaderboard_clf.csv",
+            "url": "https://juleskreuer.eu/research/files/tabbench-llm/leaderboard_clf.csv",
+            "format": "csv",
+            "description": "Flat classification model ranking table.",
+        },
+    ],
+}
+
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -1433,6 +1488,8 @@ def build_site(
     )
 
     payload = {
+        "ai_agent_notice": AI_AGENT_NOTICE,
+        "benchmark_files": BENCHMARK_FILES,
         "order": order,
         "tabs": tabs,
         "category_colors": CATEGORY_COLOR,

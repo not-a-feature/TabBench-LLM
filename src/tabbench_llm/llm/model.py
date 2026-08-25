@@ -197,7 +197,7 @@ class LLMModel:
         temperature: float = 0.0,
         max_tokens: int = 16384,
         max_tokens_ceiling: int = 32768,
-        request_timeout: int = 600,
+        request_timeout: int | None = None,
         thinking: bool | None = None,
         reasoning_effort: str | None = None,
         test_batch_size: int | None = None,

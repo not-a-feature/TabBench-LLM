@@ -100,6 +100,106 @@ def _write_grid_data(grid: pd.DataFrame, site_out: Path) -> None:
     summary.to_csv(data_out / "feature_grid_summary.csv", index=False)
 
 
+def _timing_summary(records: pd.DataFrame, group_cols: list[str]) -> list[dict]:
+    summaries = []
+    for keys, group in records.groupby(group_cols, sort=True):
+        if not isinstance(keys, tuple):
+            keys = (keys,)
+        total_samples = int(group["n_test_samples"].sum())
+        total_seconds = float(group["inference_time_s"].sum())
+        row = dict(zip(group_cols, keys, strict=True))
+        if "n_train" in row:
+            row["n_train"] = int(row["n_train"])
+        row.update(
+            {
+                "runs": int(len(group)),
+                "datasets": int(group["dataset"].nunique()),
+                "samples": total_samples,
+                "total_inference_time_s": round(total_seconds, 3),
+                "weighted_ms_per_sample": round(1000 * total_seconds / total_samples, 4),
+                "median_run_ms_per_sample": round(
+                    float(group["inference_time_per_sample_ms"].median()), 4
+                ),
+            }
+        )
+        summaries.append(row)
+    return summaries
+
+
+def _write_inference_time(output: Path, site_out: Path) -> dict[str, int]:
+    records = []
+    pattern = "reason_*/labels_*/feat_*/n_*/seed_*/stats/*.json"
+    for stats_path in sorted(output.glob(pattern)):
+        stats = json.loads(stats_path.read_text(encoding="utf-8"))
+        if stats["status"] != "pass" or stats["inference_time_s"] is None:
+            continue
+        relative = stats_path.relative_to(output)
+        record = {
+            "model": str(stats["model"]),
+            "reasoning": relative.parts[0].removeprefix("reason_"),
+            "labels": relative.parts[1].removeprefix("labels_"),
+            "feature_cap": relative.parts[2].removeprefix("feat_"),
+            "n_train": int(relative.parts[3].removeprefix("n_")),
+            "seed": int(relative.parts[4].removeprefix("seed_")),
+            "dataset": str(stats["dataset"]),
+            "n_test_samples": int(stats["n_test_samples"]),
+            "inference_time_s": float(stats["inference_time_s"]),
+            "inference_time_per_sample_ms": float(stats["inference_time_per_sample_ms"]),
+            "llm_api_calls": (
+                int(stats["llm_api_calls"])
+                if "llm_api_calls" in stats and stats["llm_api_calls"] is not None
+                else None
+            ),
+            "timestamp": str(stats["timestamp"]),
+        }
+        records.append(record)
+
+    frame = pd.DataFrame(records)
+    if frame.empty:
+        overall = []
+        by_cell = []
+        source_max_timestamp = None
+    else:
+        overall = _timing_summary(frame, ["model", "reasoning"])
+        by_cell = _timing_summary(
+            frame, ["model", "reasoning", "labels", "feature_cap", "n_train"]
+        )
+        source_max_timestamp = max(frame["timestamp"])
+
+    payload = {
+        "schema_version": 1,
+        "scope": "Passing runs with non-null inference timing.",
+        "timing_semantics": (
+            "End-to-end model.predict wall time, including endpoint latency, queueing, "
+            "retries and generation; not pure model token throughput."
+        ),
+        "join_keys": [
+            "model",
+            "reasoning",
+            "labels",
+            "feature_cap",
+            "n_train",
+            "seed",
+            "dataset",
+        ],
+        "units": {
+            "inference_time_s": "seconds per completed run",
+            "inference_time_per_sample_ms": "milliseconds per test sample",
+            "weighted_ms_per_sample": "total seconds / total samples, in milliseconds",
+        },
+        "source_max_timestamp": source_max_timestamp,
+        "overall": overall,
+        "by_cell": by_cell,
+        "records": records,
+    }
+    data_out = site_out / "data"
+    data_out.mkdir(parents=True, exist_ok=True)
+    (data_out / "inference_time.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8"
+    )
+    return {"records": len(records), "overall": len(overall), "by_cell": len(by_cell)}
+
+
 def _current_status(output: Path) -> tuple[dict[str, int], set[str]]:
     frames = []
     for config_path in sorted(output.glob("reason_*/labels_*/feat_*/n_*/config.json")):
@@ -146,6 +246,7 @@ def main() -> None:
         print(f"Recomputed available metrics in {count} cell(s).")
     grid, candidates = _read_cells(output)
     _write_grid_data(grid, site_out)
+    timing_counts = _write_inference_time(output, site_out)
     reference = _choose_reference(candidates)
     status_counts, status_models = _current_status(output)
 
@@ -186,6 +287,11 @@ def main() -> None:
     )
     print(f"Current-state preview built from {reference}")
     print(f"Observed rows: {len(grid)}; models: {models}; datasets: {datasets}")
+    print(
+        "Inference timing: "
+        f"records={timing_counts['records']}; overall={timing_counts['overall']}; "
+        f"by_cell={timing_counts['by_cell']}"
+    )
     print("Status: " + (status_text or "no status records"))
     print("Failures are not chance-imputed in this preview; use finalize_grid.py for publication.")
 
