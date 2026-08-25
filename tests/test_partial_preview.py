@@ -85,15 +85,7 @@ def test_recompute_uses_the_selected_result_root(tmp_path, monkeypatch):
 def test_inference_time_payload_has_records_and_weighted_summaries(tmp_path):
     output = tmp_path / "results"
     site = tmp_path / "site"
-    stats = (
-        output
-        / "reason_off"
-        / "labels_hidden"
-        / "feat_full"
-        / "n_10"
-        / "seed_0"
-        / "stats"
-    )
+    stats = output / "reason_off" / "labels_hidden" / "feat_full" / "n_10" / "seed_0" / "stats"
     stats.mkdir(parents=True)
     records = [
         {
