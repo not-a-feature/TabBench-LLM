@@ -250,7 +250,7 @@ def main() -> None:
     reference = _choose_reference(candidates)
     status_counts, status_models = _current_status(output)
 
-    with tempfile.TemporaryDirectory(prefix="tabarena-partial-preview-") as temp:
+    with tempfile.TemporaryDirectory(prefix="tabbench-partial-preview-") as temp:
         preview_results = Path(temp)
         preview_metrics = preview_results / "metrics"
         preview_metrics.mkdir()

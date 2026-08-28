@@ -59,7 +59,7 @@ cleanup() {
 trap cleanup EXIT
 
 if ! api_ready; then
-    server_log=$(mktemp "${TMPDIR:-/tmp}/tabarena-ollama-setup.XXXXXX.log")
+    server_log=$(mktemp "${TMPDIR:-/tmp}/tabbench-ollama-setup.XXXXXX.log")
     echo "Starting a temporary Ollama server at ${OLLAMA_HOST:-127.0.0.1:11434}..."
     ollama serve > "$server_log" 2>&1 &
     server_pid=$!
@@ -93,7 +93,7 @@ for key in keys:
 PY
 )
 
-model_file=$(mktemp "${TMPDIR:-/tmp}/tabarena-ollama-modelfile.XXXXXX")
+model_file=$(mktemp "${TMPDIR:-/tmp}/tabbench-ollama-modelfile.XXXXXX")
 
 while IFS=$'\t' read -r key source alias context_window; do
     [ -n "$key" ] || continue

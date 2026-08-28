@@ -125,13 +125,17 @@ def _validate_member(name: str) -> None:
 
 
 def import_bundle(
-    bundle: Path, dest: Path, *, keep_dest_conflicting_units: bool = False
+    bundle: Path,
+    dest: Path,
+    *,
+    keep_dest_conflicting_units: bool = False,
+    replace_dest_retries: bool = False,
 ) -> dict[str, int]:
     bundle = bundle.resolve()
     if not bundle.is_file():
         raise ValueError(f"bundle does not exist: {bundle}")
 
-    with tempfile.TemporaryDirectory(prefix="tabarena-result-bundle-") as temp:
+    with tempfile.TemporaryDirectory(prefix="tabbench-result-bundle-") as temp:
         extracted = Path(temp)
         with zipfile.ZipFile(bundle) as archive:
             for member in archive.namelist():
@@ -161,6 +165,7 @@ def import_bundle(
             payload,
             dest,
             keep_dest_conflicting_units=keep_dest_conflicting_units,
+            replace_dest_retries=replace_dest_retries,
         )
 
 
@@ -183,6 +188,11 @@ def main() -> None:
         action="store_true",
         help="keep destination truth and skip source artifacts for incompatible dataset/fold units",
     )
+    import_parser.add_argument(
+        "--replace-dest-retries",
+        action="store_true",
+        help="replace older retry stats records with newer passes for the same units",
+    )
     args = parser.parse_args()
 
     try:
@@ -196,12 +206,14 @@ def main() -> None:
             "identical": 0,
             "ignored_derived": 0,
             "skipped_conflicting_unit": 0,
+            "replaced_retry": 0,
         }
         for bundle in args.bundles:
             counts = import_bundle(
                 bundle,
                 args.dest,
                 keep_dest_conflicting_units=args.keep_dest_conflicting_units,
+                replace_dest_retries=args.replace_dest_retries,
             )
             print(f"{bundle}: " + " ".join(f"{key}={value}" for key, value in counts.items()))
             for key, value in counts.items():

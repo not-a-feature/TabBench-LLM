@@ -2,15 +2,15 @@
 # Self-host the cluster model slice with Ollama on one H100 (physical GPU 0 by default).
 # Submit: MODELS="LOCAL-QWEN3-8B LOCAL-QWEN3-32B-FP8" sbatch run_ollama_grid.sbatch
 
-#SBATCH --job-name=tabarena-ollama
+#SBATCH --job-name=tabbench-ollama
 #SBATCH --cpus-per-task=32
 #SBATCH --nodes=1
 #SBATCH --partition=h100-ferranti
 #SBATCH --mem=200G
 #SBATCH --gres=gpu:1
 #SBATCH --time=48:00:00
-#SBATCH --output=tabarena_ollama.%j.out
-#SBATCH --error=tabarena_ollama.%j.err
+#SBATCH --output=tabbench_ollama.%j.out
+#SBATCH --error=tabbench_ollama.%j.err
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=jules.kreuer@uni-tuebingen.de
 
@@ -108,7 +108,7 @@ bash scripts/setup_linux_ollama.sh --skip-install --models "$MODELS"
 for key in $MODELS; do
     echo "[ollama-grid] running $key"
     python scripts/capture_run_manifest.py --config "$GRID_CONFIG" --output "$OUTPUT" --models "$key"
-    python scripts/grid.py --config "$GRID_CONFIG" --output "$OUTPUT" --models "$key"
+    python scripts/grid.py --config "$GRID_CONFIG" --output "$OUTPUT" --models "$key" --skip-aggregate
     alias=$(python -c "from tabbench_llm.llm.registry import LLM_MODELS; print(LLM_MODELS['$key']['api_model'])")
     ollama stop "$alias" || true
 done
@@ -118,7 +118,7 @@ cleanup
 trap - EXIT INT TERM
 
 python scripts/capture_run_manifest.py --config "$GRID_CONFIG" --output "$OUTPUT" --models "$BASELINES"
-python scripts/grid.py --config "$GRID_CONFIG" --output "$OUTPUT" --models "$BASELINES"
+python scripts/grid.py --config "$GRID_CONFIG" --output "$OUTPUT" --models "$BASELINES" --skip-aggregate
 python scripts/grid.py --config "$GRID_CONFIG" --output "$OUTPUT" --skip-run
 
 echo "[ollama-grid] finished: $OUTPUT"

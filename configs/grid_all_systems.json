@@ -1,7 +1,8 @@
 {
   "_doc": "Canonical publication grid shared by all three machines. Each machine runs only its --models slice; never change this roster while merging into the same output root.",
   "reasoning": [
-    "off"
+    "off",
+    "on"
   ],
   "_headline": "Synthetic · Reason off · feat full · opaque labels · n=100 · macro-F1",
   "_label_note": "scripts/grid.py schedules visible labels only for real datasets. Synthetic datasets run only the opaque/hidden arm.",
@@ -13,7 +14,8 @@
   ],
   "real_grid": {
     "reasoning": [
-      "off"
+      "off",
+      "on"
     ],
     "labels": [
       "visible",
@@ -26,7 +28,7 @@
       50
     ]
   },
-  "_real_grid_note": "The secondary real-data suite is deliberately limited to reason=off x visible/opaque labels x full features x n=50. scripts/grid.py keeps historic per-cell config.json files unchanged and filters execution/aggregation to this schedule, so existing partial Ollama results remain merge-compatible.",
+  "_real_grid_note": "The secondary real-data suite is deliberately limited to reason=off/on x visible/opaque labels x full features x n=50. scripts/grid.py keeps historic per-cell config.json files unchanged and filters execution/aggregation to this schedule, so existing partial Ollama results remain merge-compatible.",
   "datasets": "datasets/tabarena_classification.json",
   "models": [
     "DUMMY",

@@ -14,6 +14,7 @@ import argparse
 import hashlib
 import json
 import shutil
+from datetime import datetime
 from pathlib import Path
 
 DERIVED_NAMES = {
@@ -81,6 +82,21 @@ def _files_equivalent(source: Path, dest: Path, relative: Path) -> bool:
     return False
 
 
+def _is_newer_pass_replacing_retry(source: Path, dest: Path, relative: Path) -> bool:
+    if relative.suffix.lower() != ".json" or "stats" not in relative.parts:
+        return False
+    source_payload = json.loads(source.read_text(encoding="utf-8"))
+    dest_payload = json.loads(dest.read_text(encoding="utf-8"))
+    return (
+        source_payload["dataset"] == dest_payload["dataset"]
+        and source_payload["model"] == dest_payload["model"]
+        and source_payload["status"] == "pass"
+        and dest_payload["status"] == "retry"
+        and datetime.fromisoformat(source_payload["timestamp"])
+        > datetime.fromisoformat(dest_payload["timestamp"])
+    )
+
+
 def _conflicting_ground_truth_units(source: Path, dest: Path) -> set[tuple[Path, str]]:
     """Return ``(seed_dir, key)`` units whose shared truth values genuinely differ."""
     conflicts = set()
@@ -108,7 +124,11 @@ def _belongs_to_unit(relative: Path, units: set[tuple[Path, str]]) -> bool:
 
 
 def merge_results(
-    source: Path, dest: Path, *, keep_dest_conflicting_units: bool = False
+    source: Path,
+    dest: Path,
+    *,
+    keep_dest_conflicting_units: bool = False,
+    replace_dest_retries: bool = False,
 ) -> dict[str, int]:
     """Conflict-check and merge one raw result directory into another."""
     source = source.resolve()
@@ -126,6 +146,7 @@ def merge_results(
         "identical": 0,
         "ignored_derived": 0,
         "skipped_conflicting_unit": 0,
+        "replaced_retry": 0,
     }
     for src in sorted(path for path in source.rglob("*") if path.is_file()):
         relative = src.relative_to(source)
@@ -138,6 +159,10 @@ def merge_results(
         dst = dest / relative
         if dst.exists():
             if not _files_equivalent(src, dst, relative):
+                if replace_dest_retries and _is_newer_pass_replacing_retry(src, dst, relative):
+                    shutil.copy2(src, dst)
+                    counts["replaced_retry"] += 1
+                    continue
                 raise ValueError(
                     f"conflict at {relative}: source and destination differ; "
                     "keep both result roots and investigate the duplicate run"
@@ -162,6 +187,11 @@ def main() -> None:
             "artifact for that dataset/fold unit; all other conflicts still fail"
         ),
     )
+    parser.add_argument(
+        "--replace-dest-retries",
+        action="store_true",
+        help="replace an older retry stats record with a newer pass for the same unit",
+    )
     args = parser.parse_args()
 
     try:
@@ -169,6 +199,7 @@ def main() -> None:
             args.source,
             args.dest,
             keep_dest_conflicting_units=args.keep_dest_conflicting_units,
+            replace_dest_retries=args.replace_dest_retries,
         )
     except ValueError as error:
         raise SystemExit(str(error)) from error

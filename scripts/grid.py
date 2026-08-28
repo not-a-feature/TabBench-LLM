@@ -351,6 +351,11 @@ def main():
     p.add_argument("--config", required=True, help="grid config JSON (see configs/grid.json)")
     p.add_argument("--skip-run", action="store_true", help="only re-aggregate existing results")
     p.add_argument(
+        "--skip-aggregate",
+        action="store_true",
+        help="run a machine/model slice without aggregating until all required slices exist",
+    )
+    p.add_argument(
         "--models",
         help="comma-separated model keys, overriding the config's models list for a machine slice.",
     )
@@ -447,6 +452,9 @@ def main():
             loaded["dataset_names_classification"] = execution_datasets
             compute_predictions(loaded)
             compute_metrics_from_predictions(loaded)
+
+    if args.skip_aggregate:
+        return
 
     grid = aggregate_schedule(output, schedule)
     grid_path = os.path.join(output, "grid_metrics.csv")

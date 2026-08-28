@@ -24,6 +24,7 @@ def test_merge_accepts_only_platform_separator_difference_in_config(tmp_path):
         "identical": 1,
         "ignored_derived": 0,
         "skipped_conflicting_unit": 0,
+        "replaced_retry": 0,
     }
 
 
@@ -87,6 +88,7 @@ def test_merge_accepts_csv_line_ending_difference_only(tmp_path):
         "identical": 1,
         "ignored_derived": 0,
         "skipped_conflicting_unit": 0,
+        "replaced_retry": 0,
     }
 
 
@@ -136,6 +138,72 @@ def test_merge_rejects_scientifically_different_stats(tmp_path):
 
     with pytest.raises(ValueError, match="conflict at"):
         merge_results(source, dest)
+
+
+def test_merge_can_replace_older_retry_with_newer_pass(tmp_path):
+    source = tmp_path / "source"
+    dest = tmp_path / "dest"
+    relative = "cell/seed_0/stats/dataset_MODEL.json"
+    (source / relative).parent.mkdir(parents=True)
+    (dest / relative).parent.mkdir(parents=True)
+    source_payload = {
+        "dataset": "dataset",
+        "model": "MODEL",
+        "status": "pass",
+        "timestamp": "2026-08-16T11:35:54",
+    }
+    (source / relative).write_text(json.dumps(source_payload), encoding="utf-8")
+    (dest / relative).write_text(
+        json.dumps(
+            {
+                "dataset": "dataset",
+                "model": "MODEL",
+                "status": "retry",
+                "timestamp": "2026-08-11T00:34:32",
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    counts = merge_results(source, dest, replace_dest_retries=True)
+
+    assert counts["replaced_retry"] == 1
+    assert json.loads((dest / relative).read_text(encoding="utf-8")) == source_payload
+
+
+def test_merge_does_not_replace_pass_with_different_pass(tmp_path):
+    source = tmp_path / "source"
+    dest = tmp_path / "dest"
+    relative = "cell/seed_0/stats/dataset_MODEL.json"
+    (source / relative).parent.mkdir(parents=True)
+    (dest / relative).parent.mkdir(parents=True)
+    (source / relative).write_text(
+        json.dumps(
+            {
+                "dataset": "dataset",
+                "model": "MODEL",
+                "status": "pass",
+                "timestamp": "2026-08-16T11:35:54",
+                "score": 1,
+            }
+        ),
+        encoding="utf-8",
+    )
+    (dest / relative).write_text(
+        json.dumps(
+            {
+                "dataset": "dataset",
+                "model": "MODEL",
+                "status": "pass",
+                "timestamp": "2026-08-11T00:34:32",
+                "score": 0,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="conflict at"):
+        merge_results(source, dest, replace_dest_retries=True)
 
 
 def test_keep_dest_conflicting_unit_skips_all_source_model_artifacts(tmp_path):
